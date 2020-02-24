@@ -4,6 +4,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import ApptDetails from '../screens/ApptDetails';
+import BreakFormScreen from '../screens/BreakFormScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -40,6 +41,14 @@ export default function BottomTabNavigator({ navigation, route }) {
         tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-calendar" />,
       }}
     />
+   <BottomTab.Screen
+        name="Lunch Break Form"
+        component={BreakFormScreen}
+        options={{
+          title: 'Lunch Break Form',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }}
+      />
   </BottomTab.Navigator>
   );
 }
