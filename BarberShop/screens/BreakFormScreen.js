@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, Picker,} from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, Picker, Alert,} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
-import TimePicker from '../components/barberBreakForm';
+import TimePicker from '../components/TimePicker';
+import BreakReasonPicker from '../components/BreakReasonPicker';
 
 import { MonoText } from '../components/StyledText';
 
@@ -13,6 +14,9 @@ export default function HomeScreen() {
       <TimePicker style={styles.padding}/>
       <Text>End Time:</Text>
       <TimePicker style={styles.padding}/>
+      <Text>Reason for Break:</Text>
+      <BreakReasonPicker />
+      <Button title="Confirm" onPress={() => Alert.alert('Simple Button pressed')} style={styles.button} />
     </View>
   );
 }
@@ -56,10 +60,17 @@ function handleHelpPress() {
 
 const styles = StyleSheet.create({
   whateveryouregonnacallit: {
-    textAlign: 'center',
+    alignItems: 'center',
     justifyContent: 'center',
+    padding: '1%',
   },
   padding: {
-    marginVertical: '1%',
+    marginVertical: '10%',
+    padding: '1%',
+  },
+  button: {
+    margin: '1%',
+
+
   },
 });

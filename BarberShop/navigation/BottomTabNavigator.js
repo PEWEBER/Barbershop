@@ -63,5 +63,7 @@ function getHeaderTitle(route) {
       return 'Links to learn more';
     case 'ApptDetails':
       return 'Confirmation';
+    case 'Lunch Break Form':
+      return 'Lunch Break Form';
   }
 }
