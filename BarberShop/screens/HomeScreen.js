@@ -21,6 +21,7 @@ export default function HomeScreen() {
           />
         </View>
 
+        <View>
         <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
           <Text style={styles.buttonCenter}>Schedule an Appointment</Text>
         </TouchableOpacity>

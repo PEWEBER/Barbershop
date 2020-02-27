@@ -10,6 +10,25 @@ import { MonoText } from '../components/StyledText';
 export default function HomeScreen() {
   return (
     <View style={styles.whateveryouregonnacallit}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <View style={styles.padding}>
+        <Text style={styles.label}>Start Time:</Text>
+        <TimePicker/>
+      </View>
+      <View style={styles.padding}>
+        <Text style={styles.label}>End Time:</Text>
+        <TimePicker/>
+      </View>
+      <View style={styles.padding}>
+        <Text style={styles.label}>Reason for Break:</Text>
+        <BreakReasonPicker/>
+      </View>
+      <View>
+        <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+            <Text style={styles.buttonCenter}>Confirm</Text>
+        </TouchableOpacity>
+      </View>
+      </ScrollView>
     </View>
     
   );
@@ -54,6 +73,10 @@ function handleHelpPress() {
 
 const styles = StyleSheet.create({
   whateveryouregonnacallit: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  padding: {
     //marginVertical: '1%',
     //marginTop: '1%',
     //padding: '1%',
@@ -62,11 +85,31 @@ const styles = StyleSheet.create({
     padding: '1%',
     // backgroundColor: '#ff0',
   },
+  pickers: {
+    //marginVertical: '1%',
+    //marginTop: '1%',
+    //padding: '1%',
+    width: 200,
   },
-  button: {
-    margin: '1%',
-
-
+  buttonCenter: {
+    backgroundColor: 'black',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 12,
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    padding: 12,
+    textAlign:'center',
+  },
+  contentContainer: {
+    paddingTop: 30,
+  },
+  label: {
+    fontWeight: "bold",
+    textDecoractionStyle: "dotted",
+    fontSize: 20,
   },
   
 });

@@ -10,6 +10,10 @@ class PickerExample extends Component {
       return (
          <View>
             <Picker selectedValue = {this.state.user} onValueChange = {this.updateUser}>
+               <Picker.Item label = "Lunch"/>
+               <Picker.Item label = "Doctor's Appt"/>
+               <Picker.Item label = "Family Emergency" />
+               <Picker.Item label = "Other" />
             </Picker>
          </View>
       )
