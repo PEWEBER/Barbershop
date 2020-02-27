@@ -48,7 +48,7 @@ export default function HomeScreen() {
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
-      
+
     </View>
   );
 }
