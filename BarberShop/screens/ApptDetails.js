@@ -1,92 +1,144 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Picker, Button, TextInput } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
-
+import ServicePicker from '../components/ServicePicker';
+import { CheckBox } from 'react-native-elements';
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
+export default function ApptDetails() {
+
+  const [value, onChangeText] = React.useState('Tell us what we need to know');
+  const [checked, onBoxClick] = React.useState(false);
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Text style={styles.LogoText}>LINEUP</Text>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/moust.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
+        <Text style={styles.headings}>What Time?</Text>
+        <View style = {styles.timeButtons}>
+        <View style={{flex:0.1}}></View>
+        <View style={{flex:0.8, flexDirection:'column'}}>
+        <View style={{flexDirection:'row', justifyContent: 'center'}}>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>10:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>10:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>11:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>11:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>12:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>1:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>1:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>2:00</Text>
+          </TouchableOpacity>
+          </View>
+          <View style={{flexDirection:'row', justifyContent: 'center'}}>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>2:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>3:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>3:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>4:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>4:30</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>5:00</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{flex:0.1}}>
+            <Text style={styles.buttonCenter}>5:30</Text>
+          </TouchableOpacity>
+          </View>
+          </View>
+          <View style={{flex:0.1}}></View>
+        </View>
+
+        <View style={styles.service}>
+        <Text style={styles.headings}>Select Services</Text>
+          <View style={{flexDirection:'row', justifyContent: 'center'}}>
+          <CheckBox
+            center
+            title='Cut'
+            checkedIcon='dot-circle-o'
+            uncheckedIcon='circle-o'
+
+          />
+          <CheckBox
+            center
+            title='Shampoo'
+            checkedIcon='dot-circle-o'
+            uncheckedIcon='circle-o'
+            //checked={this.state.checked}
+          />
+          <CheckBox
+            center
+            title='Shave'
+            checkedIcon='dot-circle-o'
+            uncheckedIcon='circle-o'
+            //checked={this.state.checked}
+          />
+          <CheckBox
+            center
+            title='Beard Trim'
+            checkedIcon='dot-circle-o'
+            uncheckedIcon='circle-o'
+            //checked={this.state.checked}
+          />
+          <CheckBox
+            center
+            title='Other'
+            checkedIcon='dot-circle-o'
+            uncheckedIcon='circle-o'
+            //checked={this.state.checked}
+          />
+          </View>
+        </View>
+        <View style={{ justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={styles.headings}>Special Instructions</Text>
+          <TextInput
+            style={{ height: 80, width:500, borderColor: 'gray', borderWidth: 1, textAlign: 'center', color: 'grey', borderRadius: 12}}
+            onChangeText={text => onChangeText(text)}
+            value={value}
           />
         </View>
-
-        <View style={styles.buttonColumn}>
-        <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
-          <Text style={styles.buttonCenter}>Schedule an Appointment</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
-          <Text style={styles.buttonCenter}>Our Services</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
-          <Text style={styles.buttonCenter}>The Store</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
-          <Text style={styles.buttonCenter}>My Rewards</Text>
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 100}}>
+        <View style={{flex:0.20}}>
         </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
+          <View style={{flex:0.20}}>
+          <TouchableOpacity >
+            <Text style={styles.buttonConfirm}>Confirm</Text>
           </TouchableOpacity>
+          </View>
+          <View style={{flex:0.20}}>
+          </View>
+          <View style={{flex:0.20}}>
+          <TouchableOpacity >
+            <Text style={styles.buttonConfirm}>Cancel</Text>
+          </TouchableOpacity>
+          </View>
+          <View style={{flex:0.20}}>
+          </View>
         </View>
       </ScrollView>
-
-
-
-        <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
-        </View>
-
     </View>
-  );
-}
-
-HomeScreen.navigationOptions = {
-  header: null,
-};
-
-function DevelopmentModeNotice() {
-  if (__DEV__) {
-    const learnMoreButton = (
-      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
-        Learn more
-      </Text>
-    );
-
-    return (
-      <Text style={styles.developmentModeText}>
-        Development mode is enabled: your app will be slower but you can use useful development
-        tools. {learnMoreButton}
-      </Text>
-    );
-  } else {
-    return (
-      <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
-      </Text>
-    );
-  }
-}
-
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
   );
 }
 
@@ -94,6 +146,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  service: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 80,
+    marginBottom: 80,
+  },
+  timeButtons: {
+    flexDirection: 'row',
+    flex: 1,
+  },
+  headings: {
+    marginBottom: 20,
+    color: 'black',
+    fontSize: 20,
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -123,11 +192,25 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 12,
     color: 'white',
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: 'bold',
     overflow: 'hidden',
     padding: 12,
     textAlign:'center',
+    flex: 1,
+  },
+  buttonConfirm: {
+    backgroundColor: 'black',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 12,
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    padding: 12,
+    textAlign:'center',
+    flex: .25,
   },
   welcomeImage: {
     width: 200,
