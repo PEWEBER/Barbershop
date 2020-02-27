@@ -40,21 +40,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  /*selectedHours: {
     flex: 1,
     backgroundColor: '#fff',
     //marginLeft:'10%',
     //marginRight:'1%',
     alignItems: 'center',
     justifyContent: 'center',
-  },*/
-  /*selectedMinutes: {
     flex: 1,
     backgroundColor: '#fff',
     marginLeft:'10%',
-    //marginRight:'1%',
     alignItems: 'center',
     justifyContent: 'center',
-  },*/
 
 });

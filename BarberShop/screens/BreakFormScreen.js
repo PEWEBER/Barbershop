@@ -10,14 +10,8 @@ import { MonoText } from '../components/StyledText';
 export default function HomeScreen() {
   return (
     <View style={styles.whateveryouregonnacallit}>
-      <Text>Start Time:</Text>
-      <TimePicker style={styles.padding}/>
-      <Text>End Time:</Text>
-      <TimePicker style={styles.padding}/>
-      <Text>Reason for Break:</Text>
-      <BreakReasonPicker />
-      <Button title="Confirm" onPress={() => Alert.alert('Simple Button pressed')} style={styles.button} />
     </View>
+    
   );
 }
 
@@ -60,17 +54,19 @@ function handleHelpPress() {
 
 const styles = StyleSheet.create({
   whateveryouregonnacallit: {
+    //marginVertical: '1%',
+    //marginTop: '1%',
+    //padding: '1%',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '1%',
+    // backgroundColor: '#ff0',
   },
-  padding: {
-    marginVertical: '10%',
-    padding: '1%',
   },
   button: {
     margin: '1%',
 
 
   },
+  
 });
