@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
+import CalendarScreen from '../screens/CalendarScreen';
 import ApptDetails from '../screens/ApptDetails';
 import BreakFormScreen from '../screens/BreakFormScreen';
 
@@ -34,6 +35,14 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
     <BottomTab.Screen
+      name="CalendarScreen"
+      component={CalendarScreen}
+      options={{
+        title: 'Calendar',
+        tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-clipboard" />,
+      }}
+    />
+    <BottomTab.Screen
       name="ApptDetails"
       component={ApptDetails}
       options={{
@@ -61,6 +70,8 @@ function getHeaderTitle(route) {
       return 'Welcome!';
     case 'Links':
       return 'Links to learn more';
+    case 'CalendarScreen':
+      return 'See events here';
     case 'ApptDetails':
       return 'Confirmation';
     case 'Lunch Break Form':
