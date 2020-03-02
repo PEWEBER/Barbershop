@@ -21,7 +21,7 @@ export default function HomeScreen() {
           />
         </View>
 
-        <View style={styles.buttonColumn}>
+        <View>
         <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
           <Text style={styles.buttonCenter}>Schedule an Appointment</Text>
         </TouchableOpacity>
@@ -48,7 +48,7 @@ export default function HomeScreen() {
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
-      
+
     </View>
   );
 }

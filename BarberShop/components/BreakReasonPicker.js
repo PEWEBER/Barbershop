@@ -10,22 +10,13 @@ class PickerExample extends Component {
       return (
          <View>
             <Picker selectedValue = {this.state.user} onValueChange = {this.updateUser}>
-               <Picker.Item label = "Lunch" value = "steve" />
-               <Picker.Item label = "Doctor's Appt" value = "ellen" />
-               <Picker.Item label = "Family Emergency" value = "maria" />
-               <Picker.Item label = "Other" value = "eddie" />
+               <Picker.Item label = "Lunch"/>
+               <Picker.Item label = "Doctor's Appt"/>
+               <Picker.Item label = "Family Emergency" />
+               <Picker.Item label = "Other" />
             </Picker>
-            <Text style = {styles.text}>{this.state.user}</Text>
          </View>
       )
    }
 }
 export default PickerExample
-
-const styles = StyleSheet.create({
-   text: {
-      fontSize: 30,
-      alignSelf: 'center',
-      color: 'red'
-   }
-})

@@ -39,22 +39,24 @@ const styles = StyleSheet.create({
     marginRight:100,
     alignItems: 'center',
     justifyContent: 'center',
+    //width: 500,
   },
-  /*selectedHours: {
-    flex: 1,
-    backgroundColor: '#fff',
-    //marginLeft:'10%',
-    //marginRight:'1%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },*/
-  /*selectedMinutes: {
+  selectedHours: {
     flex: 1,
     backgroundColor: '#fff',
     marginLeft:'10%',
-    //marginRight:'1%',
+    marginRight:'1%',
     alignItems: 'center',
     justifyContent: 'center',
-  },*/
+    width: 500,
+  },
+  selectedMinutes: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginLeft:'10%',
+    marginRight:'1%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 
 });
