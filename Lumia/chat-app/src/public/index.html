@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <title>Lipscomb - Chat</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <!-- styles -->
+            <link href="assets/css/bootstrap.css" rel="stylesheet">
+            <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+            <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+            <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+            <link href="assets/css/flexslider.css" rel="stylesheet">
+            <link href="assets/css/style.css" rel="stylesheet">
+            <link href="assets/color/default.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+            
+            <!-- fav and touch icons -->
+            <link rel="shortcut icon" href="assets/ico/lipscomb.ico">
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+            <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+            
+            
+            
+            <!-- =======================================================
+                Theme Name: Lumia
+                Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+                Author: BootstrapMade.com
+                Author URL: https://bootstrapmade.com
+            ======================================================= -->
+            
+    </head>
+    <header>
+      <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="index.html"><img src="assets/img/lipscomb-logo.png" width=200 heigh=40 alt="" /></a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li class="active">
+                    <a href="index.html"><i class="icon-home"></i> Home </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#"><i class="icon-calendar"></i> Events <i class="icon-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="media.html">Media</a></li>
+                      <li><a href="color-scheme.html">10 Theme colors</a></li>
+                      <li><a href="buttons.html">Buttons</a></li>
+                      <li><a href="components.html">Components</a></li>
+                      <li><a href="animations.html">56 Animations</a></li>
+                      <li><a href="icons.html">Icons</a></li>
+                      <li><a href="icon-variations.html">Icon variations</a></li>
+                      <li class="dropdown"><a href="#">3rd level <i class="icon-angle-right"></i></a>
+                        <ul class="dropdown-menu sub-menu">
+                          <li><a href="#">Example menu</a></li>
+                          <li><a href="#">Example menu</a></li>
+                          <li><a href="#">Example menu</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#"><i class="icon-money"></i> Sponsors <i class="icon-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
+                      <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
+                      <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
+                      <li><a href="portfolio-detail.html">Portfolio detail</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="submissions.html"><i class="icon-envelope-alt"></i> Submissions</a>
+                  </li>
+                  <li>
+                    <a href="contact.html"><i class="icon-envelope-alt"></i> Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+            
+          </div>
+        </div>
+      </div>
+    </header>
+    <body>
+        Chat app
+
+        <form id="message-form">
+            <input placeholder="Message">
+            <button>Send</button>
+        </form>
+
+        <button id="increment">+1</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/chat.js"></script>
+
+    </body>
+</html>
