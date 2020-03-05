@@ -1,7 +1,7 @@
 # Barbershop
 (But not the fun kind)
 
-
+In the Lumia directory, run php -S localhost:8000 to set up temporary php server. Navigate to localhost:8000 in your web browser to see site.
 
 
 
