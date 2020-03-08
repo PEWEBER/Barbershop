@@ -53,7 +53,7 @@ function changeStatus(i,c){
 		var r = confirm("Are you sure you want to revoke approval and deny the submission?");
 		if(r){
 		button.innerHTML = "Approve";
-		button.style.background = "#3498db";
+		button.style.background = "#000000";
 		button.classList.remove('remove');
 		button.classList.add('accept');
 		status.innerHTML = "Denied";

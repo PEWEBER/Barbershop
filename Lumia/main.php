@@ -16,7 +16,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lipscomb Call for Papers</title>
+  <title>LINEUP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
 
   <!-- fav and touch icons -->
-  <link rel="shortcut icon" href="assets/ico/lipscomb.ico">
+  <link rel="shortcut icon" href="assets/ico/must.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -94,7 +94,7 @@
           <div class="container">
             <!-- logo -->
             <div class="logo">
-              <a href="main.php"><img src="assets/img/lipscomb-logo.png" alt="" /></a>
+              <a href="main.php"><img src="assets/img/Lineup.png" alt="" /></a>
             </div>
             <!-- end logo -->
 
@@ -106,16 +106,16 @@
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Events</a>
+                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
-                    <a href="#"><i class="icon-money"></i> Sponsors</a>
+                    <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
-                    <a href="submit.php"><i class="icon-pencil"></i> Submissions</a>
+                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
                   </li>
-				  <li>
-                    <a href="contact.php"><i class="icon-envelope-alt"></i> Contact</a>
+          <li>
+                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
@@ -160,24 +160,24 @@
             <div id="mainslider" class="flexslider">
               <ul class="slides">
                 <li data-thumb="assets/img/slides/flexslider/img1.jpg">
-                  <img src="assets/img/conference.jpg" alt="" />
+                  <img src="assets/img/barber.jpg" alt="" />
                   <div class="flex-caption primary">
-                    <h2>Academic Frontlines</h2>
-                    <p>We lead the area in papers published into scientific journals</p>
+                    <h2>Professional Touch</h2>
+                    <p>Meet our team of talented staff</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/sponsors.jpg">
-                  <img src="assets/img/sponsors.jpg" alt="" />
+                  <img src="assets/img/products.jpg" alt="" />
                   <div class="flex-caption warning">
-                    <h2>Join our team of Sponsors!</h2>
-                    <p>Join at the Bronze, Silver, or Gold level!</p>
+                    <h2>Top qualtity products!</h2>
+                    <p>Browse our stock in the store!</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/slides/flexslider/img3.jpg">
-                  <img src="assets/img/staff.jpg" alt="" />
+                  <img src="assets/img/styles.jpeg" alt="" />
                   <div class="flex-caption success">
-                    <h2>Nations leading Speakers</h2>
-                    <p>Dont they look happy? Do you want to be happy too?</p>
+                    <h2>A style for everyone</h2>
+                    <p>Find the one that fits you!</p>
                   </div>
                 </li>
               </ul>
@@ -195,14 +195,14 @@
             <div class="call-action">
 
               <div class="text">
-                <h2>Become part of the future</h2>
+                <h2>Get started by setting up an appointment today</h2>
                 <p>
-                  We are now accepting papers for all events. Submit yours today.
+                  Freshen up your look on your schedule.
                 </p>
               </div>
               <div class="cta">
                 <a class="btn btn-large btn-theme" href="submit.php">
-							<i class="icon-edit icon-white"></i> Submit </a>
+							<i class="icon-calendar icon-white"></i> Book a cut </a>
               </div>
 
             </div>
@@ -211,223 +211,65 @@
         </div>
 
 
-        <div class="row">
-          <h4 class="rheading" style="left:20px;"> Top rated Submissions </h4>
-          <div class="span3 features e_pulse">
-            <img src="assets/img/dummies/img1.jpg" alt="" />
-            <div class="box">
-              <div class="divcenter">
-                <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                <h4>Recruiting <br />Creatives</h4>
-              </div>
-            </div>
-          </div>
 
-          <div class="span3 features e_pulse">
-            <img src="assets/img/dummies/img2.jpg" alt="" />
-            <div class="box">
-              <div class="divcenter">
-                <a href="#"><i class="icon-circled icon-48 icon-briefcase icon"></i></a>
-                <h4>Professional <br />Social Media</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="span3 features e_pulse">
-            <img src="assets/img/dummies/img3.jpg" alt="" />
-            <div class="box">
-              <div class="divcenter">
-                <a href="#"><i class="icon-circled icon-48 icon-cogs icon"></i></a>
-                <h4>Software Dev<br />in 2025</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="span3 features e_pulse">
-            <img src="assets/img/dummies/img4.jpg" alt="" />
-            <div class="box">
-              <div class="divcenter">
-                <a href="#"><i class="icon-circled icon-48 icon-trophy icon"></i></a>
-                <h4>Future of Game Dev in academia</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="span12">
-            <h4 class="rheading">Upcoming Events<span></span></h4>
-            <div class="row">
-              <div class="span3">
-
-                <p class="hidden-phone">
-                  This month includes presentations from disguished speakers Chris Simmons and Alfa Nyandoro on everything from soda powered scooters to the price of rice in china.
-                </p>
-
-                <a href="#" class="btn btn-theme">Full Calendar</a>
-              </div>
-
-              <div class="span9">
-                <div id="latest-work" class="carousel btleft">
-                  <div class="carousel-wrapper">
-                    <ul class="da-thumbs">
-
-                      <li>
-                        <img src="assets/img/dummies/work1.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-eye-open icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-calendar icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>Tablet Computing Seminar</p>
-                          </div>
-                        </article>
-                      </li>
-
-                      <li>
-                        <img src="assets/img/dummies/work2.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-eye-open icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-calendar icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>UI Color Schemes and the Human Brain</p>
-                          </div>
-                        </article>
-                      </li>
-
-                      <li>
-                        <img src="assets/img/dummies/work3.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-eye-open icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-calendar icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>Secure Geocaching</p>
-                          </div>
-                        </article>
-                      </li>
-
-                      <li>
-                        <img src="assets/img/dummies/work4.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-zoom-in icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-link icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>Mobile template</p>
-                          </div>
-                        </article>
-                      </li>
-
-                      <li>
-                        <img src="assets/img/dummies/work5.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-zoom-in icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-link icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>Business theme</p>
-                          </div>
-                        </article>
-                      </li>
-
-                      <li>
-                        <img src="assets/img/dummies/work6.jpg" alt="" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-														<i class="icon-zoom-in icon-rounded icon-48 active"></i>
-													</a>
-                          <a href="#">
-														<i class="icon-link icon-rounded icon-48 active"></i>
-													</a>
-                          <div class="hidden-tablet">
-                            <p>Portfolio graphic</p>
-                          </div>
-                        </article>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
     <!-- Footer
  ================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="span4">
-            <div class="widget">
-              <h5>How to find us</h5>
-              <address>
-				<i class="icon-home"></i> <strong>Lipscomb University</strong><br>
-				One University Park Drive<br>
-				Nashville, TN 37204
-				</address>
-              <p>
-                <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                <i class="icon-envelope-alt"></i> chris.simmons@mail.lipscomb.edu
-              </p>
-            </div>
-            <div class="widget">
-              <ul class="social">
-                <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square icon-32"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="verybottom">
-        <div class="container">
-          <div class="row">
-            <div class="span6">
-              <p>
-                &copy; Lipscomb - All right reserved
-              </p>
-            </div>
-            <div class="span6">
-              <div class="pull-right">
-                <div class="credits">
-                  <!--
-                    All the links in the footer should remain intact.
-                    You can delete the links only if you purchased the pro version.
-                    Licensing information: https://bootstrapmade.com/license/
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
-                  -->
-                  Created by the best group in SENG
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+ <footer class="footer">
+       <div class="container">
+         <div class="row">
+           <div class="span4">
+             <div class="widget">
+               <h5>How to find us</h5>
+               <address>
+         <i class="icon-home"></i> <strong>Lineup Barbershop</strong><br>
+         420 Lineup Ln.<br>
+         Nashville, TN 37204
+         </address>
+               <p>
+                 <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
+                 <i class="icon-envelope-alt"></i> freshcutz@lineup.com
+               </p>
+             </div>
+             <div class="widget">
+               <ul class="social">
+                 <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
+                 <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
+                 <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
+                 <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square icon-32"></i></a></li>
+                 <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square icon-32"></i></a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="verybottom">
+         <div class="container">
+           <div class="row">
+             <div class="span6">
+               <p>
+                 &copy; LINEUP - All right reserved
+               </p>
+             </div>
+             <div class="span6">
+               <div class="pull-right">
+                 <div class="credits">
+                   <!--
+                     All the links in the footer should remain intact.
+                     You can delete the links only if you purchased the pro version.
+                     Licensing information: https://bootstrapmade.com/license/
+                     Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
+                   -->
+                   Created by the best group in SENG
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </footer>
 
   </div>
   <!-- end wrapper -->
