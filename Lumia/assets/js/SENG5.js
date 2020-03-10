@@ -60,3 +60,6 @@ function changeStatus(i,c){
 		}
 	}
 }
+function popBtns(){
+	var buttons = document.getElementById('b')
+}
