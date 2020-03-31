@@ -75,7 +75,7 @@
 </head>
 
 
-<body onload="userCheck()">
+<body onload="userCheck();popBtns();">
   <div id="wrapper">
     <header>
       <?php
@@ -106,7 +106,7 @@
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
+                    <a href="timeSelection.php"><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
@@ -151,69 +151,37 @@
         </div>
       </div>
     </header>
-    <section id="intro">
-
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <!-- Place somewhere in the <body> of your page -->
-            <div id="mainslider" class="flexslider">
-              <ul class="slides">
-                <li data-thumb="assets/img/slides/flexslider/img1.jpg">
-                  <img src="assets/img/barber.jpg" alt="" />
-                  <div class="flex-caption primary">
-                    <h2>Professional Touch</h2>
-                    <p>Meet our team of talented staff</p>
-                  </div>
-                </li>
-                <li data-thumb="assets/img/sponsors.jpg">
-                  <img src="assets/img/products.jpg" alt="" />
-                  <div class="flex-caption warning">
-                    <h2>Top qualtity products!</h2>
-                    <p>Browse our stock in the store!</p>
-                  </div>
-                </li>
-                <li data-thumb="assets/img/slides/flexslider/img3.jpg">
-                  <img src="assets/img/styles.jpeg" alt="" />
-                  <div class="flex-caption success">
-                    <h2>A style for everyone</h2>
-                    <p>Find the one that fits you!</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    <br><br><br><br><br><br><br>
     <section id="maincontent">
       <div class="container">
+        <div class="centerWrap">
+          <div id="buttonHolder">
+          </div>
 
-        <div class="row">
-          <div class="span12">
-            <div class="call-action">
+          <div id="serviceSelector">
+            <label class="selectWrapper">One
+              <span class="checkmark"></span>
+              <input type="checkbox" checked="checked">
+            </label>
 
-              <div class="text">
-                <h2>Get started by setting up an appointment today</h2>
-                <p>
-                  Freshen up your look on your schedule.
-                </p>
-              </div>
-              <div class="cta">
-                <a class="btn btn-large btn-theme" href="submit.php">
-							<i class="icon-calendar icon-white"></i> Book a cut </a>
-              </div>
+            <label class="selectWrapper">Two
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
 
-            </div>
-            <!-- end tagline -->
+            <label class="selectWrapper">Three
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="selectWrapper">Four
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
           </div>
         </div>
-
-
-
-
       </div>
+      <br><br><br><br><br><br>
     </section>
     <!-- Footer
  ================================================== -->

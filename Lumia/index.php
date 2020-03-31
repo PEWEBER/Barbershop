@@ -21,11 +21,11 @@ if (isset($_POST['username']) && isset($_POST['password']))
   //this is sent to the server to ask about the username and password
     //echo $username;
     //echo $password;
-    
+
     //e605dbe386d539f6d1ac1efc8ea48437cac0d178
-    
-    
-    
+
+
+
   $query = "select * from User where Username = '".$username."' and Password = '".$password."';";
 
   //sends the database server the above information about username and password store the response in result
@@ -33,7 +33,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
     //echo mysqli_result($result, 2);
     //echo "nummmmmmmsbruh";
     //echo $result -> num_rows;
-    
+
        // if($result -> num_rows > 0)
      //{
        //  while ($row = $result->fetch_assoc()) {
@@ -51,14 +51,14 @@ if (isset($_POST['username']) && isset($_POST['password']))
   {
     // if they are in the database register the user id
     $_SESSION['valid_user'] = $username;
-      
+
       //pull from database usertype
       $query2 = "select UserID from User where Username = '".$username."' and Password = '".$password."';";
       $query3 = "select Type from User where Username = '".$username."' and Password = '".$password."';";
-      
+
       $result2 = $db_conn->query($query2);
       $result3 = $db_conn->query($query3);
-      
+
       if($result2 -> num_rows > 0)
       {
           while ($row = $result2->fetch_assoc()) {
@@ -66,8 +66,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
               //echo $_SESSION['TYPE'];
           }
       }
-      
-    
+
+
       if($result3 -> num_rows > 0)
           {
               while ($row = $result3->fetch_assoc()) {
@@ -75,21 +75,21 @@ if (isset($_POST['username']) && isset($_POST['password']))
                   //echo $_SESSION['TYPE'];
               }
           }
-      
-      
-      
-      
-    
+
+
+
+
+
       header("Location: main.php");
       //echo "Session created";
   }
-    
-    
+
+
     //if the user gets the right username and password
       //echo "Session val: ";
       //echo $_SESSION['valid_user'];
 
-    
+
       if (isset($userid))
       {
         // if they've tried and failed to log in
@@ -112,8 +112,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
     }
   </style>
 <head>
-   <title>Home Page</title>
-      
+   <title>Login</title>
+      <link rel="shortcut icon" href="assets/ico/must.ico">
       <link href="assets/css/bootstrap.css" rel="stylesheet">
       <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
       <link href="assets/css/prettyPhoto.css" rel="stylesheet">
@@ -129,7 +129,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
           <div class="container">
             <!-- logo -->
             <div class="logo">
-              <a href="main.php"><img src="assets/img/lipscomb-logo.png" width=250 height=100 alt="" /></a>
+              <a href="main.php"><img src="assets/img/Lineup.png" width=250 height=100 alt="" /></a>
             </div>
             <!-- end logo -->
 
@@ -141,16 +141,16 @@ if (isset($_POST['username']) && isset($_POST['password']))
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Events</a>
+                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
-                    <a href="#"><i class="icon-money"></i> Sponsors</a>
+                    <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
-                    <a href="submit.php"><i class="icon-pencil"></i> Submissions</a>
+                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
                   </li>
 				  <li>
-                    <a href="contact.php"><i class="icon-envelope-alt"></i> Contact</a>
+                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                 </ul>
               </nav>
@@ -163,7 +163,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 </head>
 <body>
 <form action="index.php" method="post" class="loginform">
-   
+
 <fieldset>
    <legend>Login</legend>
    <br><br><br><br><br><br><br>
@@ -172,19 +172,19 @@ if (isset($_POST['username']) && isset($_POST['password']))
    <p><label for="password" class="specialLoginForm">Password:</label>
    <input type="password" name="password" class="specialLoginForm" size="30"/></p>
    </fieldset>
-     
-<button type="submit" class="specialLoginForm" name="login">Login</button>
-<br><br><br>
+
+<button type="submit" id="barbButton" class="specialLoginForm" name="login">Login</button>
+<br>
 
 </form>
-
+<p style="text-align: center;">Need an Account?</p>
 <form action="register.html" class="loginform" >
-<input type="submit" class="specialLoginForm" value="Register for an Account">
+<button type="submit" id="barbButton" class="specialLoginForm" name="Register for an Account">Register</button>
 </form>
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 </body>
 <footer class="footer">
@@ -194,13 +194,13 @@ if (isset($_POST['username']) && isset($_POST['password']))
             <div class="widget">
               <h5>How to find us</h5>
               <address>
-				<i class="icon-home"></i> <strong>Lipscomb University</strong><br>
-				One University Park Drive<br>
+				<i class="icon-home"></i> <strong>Lineup Barbershop</strong><br>
+				420 Lineup Ln.<br>
 				Nashville, TN 37204
 				</address>
               <p>
                 <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                <i class="icon-envelope-alt"></i> chris.simmons@mail.lipscomb.edu
+                <i class="icon-envelope-alt"></i> freshcutz@lineup.com
               </p>
             </div>
             <div class="widget">
@@ -220,7 +220,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
           <div class="row">
             <div class="span6">
               <p>
-                &copy; Lipscomb - All right reserved
+                &copy; LINEUP - All right reserved
               </p>
             </div>
             <div class="span6">
@@ -241,4 +241,3 @@ if (isset($_POST['username']) && isset($_POST['password']))
       </div>
     </footer>
 </html>
-

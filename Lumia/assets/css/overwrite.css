@@ -31,8 +31,8 @@ body {
   font-family:'Open Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 1.6em;
-  color: #666;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 p {
@@ -158,7 +158,7 @@ blockquote {
     border: none;
     page-break-inside: avoid;
 }
-  
+
 fieldset {
   padding: 0;
   margin: 0;

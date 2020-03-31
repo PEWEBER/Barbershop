@@ -42,6 +42,23 @@ a i:hover {
 	text-decoration:none;
 }
 
+.centerWrap{
+	text-align: center;
+}
+
+.curSelected{
+	border-radius: 12px;
+	border-color: black;
+	border-style: solid;
+	font-weight: bold;
+	color: black;
+}
+
+.curSelected a{
+	font-weight: bold;
+	color: black;
+}
+
 /* Wrapper for boxed template
 #wrapper {
 	width:1000px;
@@ -72,9 +89,18 @@ td button{
 	color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-	background: #3498db;
+	background: #000000;
 	text-align: center;
 	margin: auto;
+}
+
+.barbButton{
+	background-color: #000000;
+	border-radius: 12px;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
 }
 
 td button.remove{
@@ -109,7 +135,7 @@ table td i{
   margin-top: -12.5%;
   /* -1/2 height */
 	border: 2px;
-	border-color: #2980b9;
+	border-color: #2b2929;
 	border-style: solid;
 	display: none;
 }
@@ -122,9 +148,10 @@ table td i{
 #reviewForm input{
 	z-index: 3;
 	border-radius: 4px;
-	background:#3498db;
+	background:#000000;
 	color:white;
 }
+
 
 #prsntID{
 	display: none;
@@ -132,7 +159,7 @@ table td i{
 
 .loader {
   border: 5px solid #f3f3f3; /* Light grey */
-  border-top: 5px solid #3498db; /* Blue */
+  border-top: 5px solid #000000; /* Blue */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -1959,6 +1986,8 @@ h2.error {
 .priceBox hr {
   margin: 0;
 }
+
+
 .priceBox span {
   display: block;
   padding: 10px 0;
@@ -2164,10 +2193,10 @@ img.max-img {
 	font-weight:700;
 }
 .color-box.default p.first {
-  background: #3498db;
+  background: #000000;
 }
 .color-box.default p.sec {
-  background: #2980b9;
+  background: #2b2929;
 }
 
 

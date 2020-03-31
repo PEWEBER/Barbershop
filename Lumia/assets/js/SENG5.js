@@ -53,10 +53,17 @@ function changeStatus(i,c){
 		var r = confirm("Are you sure you want to revoke approval and deny the submission?");
 		if(r){
 		button.innerHTML = "Approve";
-		button.style.background = "#3498db";
+		button.style.background = "#000000";
 		button.classList.remove('remove');
 		button.classList.add('accept');
 		status.innerHTML = "Denied";
 		}
+	}
+}
+function popBtns(){
+	var buttonField = document.getElementById('buttonHolder');
+	var time = "7:00";
+	for(var i = 0; i < 8; i++){
+		buttonField.innerHTML += '<button type="button" class="barbButton">' + time + '</button>';
 	}
 }
