@@ -42,6 +42,10 @@ a i:hover {
 	text-decoration:none;
 }
 
+.centerWrap{
+	text-align: center;
+}
+
 .curSelected{
 	border-radius: 12px;
 	border-color: black;
@@ -90,7 +94,7 @@ td button{
 	margin: auto;
 }
 
-#barbButton{
+.barbButton{
 	background-color: #000000;
 	border-radius: 12px;
   border: none;
@@ -147,6 +151,7 @@ table td i{
 	background:#000000;
 	color:white;
 }
+
 
 #prsntID{
 	display: none;
@@ -1981,6 +1986,8 @@ h2.error {
 .priceBox hr {
   margin: 0;
 }
+
+
 .priceBox span {
   display: block;
   padding: 10px 0;

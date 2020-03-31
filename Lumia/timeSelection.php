@@ -75,7 +75,7 @@
 </head>
 
 
-<body onload="userCheck()">
+<body onload="userCheck();popBtns();">
   <div id="wrapper">
     <header>
       <?php
@@ -106,7 +106,7 @@
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
+                    <a href="timeSelection.php"><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
@@ -151,15 +151,37 @@
         </div>
       </div>
     </header>
-
+    <br><br><br><br><br><br><br>
     <section id="maincontent">
       <div class="container">
-        <div id="buttonHolder">
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
+        <div class="centerWrap">
+          <div id="buttonHolder">
+          </div>
+
+          <div id="serviceSelector">
+            <label class="selectWrapper">One
+              <span class="checkmark"></span>
+              <input type="checkbox" checked="checked">
+            </label>
+
+            <label class="selectWrapper">Two
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="selectWrapper">Three
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="selectWrapper">Four
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
         </div>
       </div>
+      <br><br><br><br><br><br>
     </section>
     <!-- Footer
  ================================================== -->

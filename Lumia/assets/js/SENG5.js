@@ -61,5 +61,9 @@ function changeStatus(i,c){
 	}
 }
 function popBtns(){
-	var buttons = document.getElementById('b')
+	var buttonField = document.getElementById('buttonHolder');
+	var time = "7:00";
+	for(var i = 0; i < 8; i++){
+		buttonField.innerHTML += '<button type="button" class="barbButton">' + time + '</button>';
+	}
 }

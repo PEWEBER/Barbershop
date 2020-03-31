@@ -106,7 +106,7 @@
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
+                    <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
