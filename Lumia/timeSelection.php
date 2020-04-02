@@ -102,20 +102,20 @@
             <div class="navigation">
               <nav>
                 <ul class="nav topnav">
-                  <li class="active">
+                  <li>
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
-                  <li><!-- TODO: Make a Events Paige -->
+                  <li class="active"><!-- TODO: Make a Events Paige -->
                     <a href="timeSelection.php"><i class="icon-calendar"></i> Appointments</a>
                   </li>
-                  <li><!-- TODO: Make a Sponsors Paige -->
+                  <li><!-- TODO: Make a Products Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
-                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
+                    <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
-          <li>
-                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
+                  <li>
+                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
