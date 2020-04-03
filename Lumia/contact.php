@@ -215,13 +215,13 @@
 
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="mail.php" method="post" role="form" class="contactForm">
               <div class="row">
                 <div class="span4 form-group">
                   <input type="text" name="name" class="input-block-level" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
-
+<!--FORM STARTS HERE--!>
                 <div class="span4 form-group">
                   <input type="email" class="input-block-level" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
@@ -258,7 +258,7 @@
 				</address>
               <p>
                 <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                <i class="icon-envelope-alt"></i> chris.simmons@mail.lipscomb.edu
+                <i class="icon-envelope-alt"></i> lineupbarbershoppe@gmail.com
               </p>
             </div>
             <div class="widget">
