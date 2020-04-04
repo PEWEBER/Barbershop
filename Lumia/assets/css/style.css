@@ -157,8 +157,16 @@ table td i{
 	display: none;
 }
 
+#calendarWrapper{
+	
+}
+
 .rightFloat{
 	float: right;
+}
+
+.lefttFloat{
+	float: left;
 }
 
 .loader {
