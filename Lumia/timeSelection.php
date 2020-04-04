@@ -154,12 +154,68 @@
     <br><br><br><br><br><br><br>
     <section id="maincontent">
       <div class="container">
-        <div class="centerWrap">
-          <div class="leftFloat">
-          <div id="buttonHolder">
-          </div>
-
-          <div id="serviceSelector">
+        <!--<div class="centerWrap">-->
+          <!--<div class="leftFloat">-->
+          <!--<div id="buttonHolder">-->
+        
+        
+        <form id="apptform">
+        <label for="barbers">Choose a Barber:</label>
+		<select id="barbers">
+  		<option value="paige">Paige</option>
+  			<option value="eddie">Eddie</option>
+  			<option value="zachw">Zach W</option>
+  			<option value="zachj">Zach J</option>
+		</select>
+		<br>
+		
+		<label for="barbers">Choose a Date:</label>
+		<select id="barbers">
+  		<option value="paige">Saturday, April 11th 2020</option>
+  			<option value="eddie">Sunday, April 12th 2020</option>
+  			<option value="zachw">Monday, April 13th 2020</option>
+  			<option value="zachj">Tuesday, April 14th 2020</option>
+  			<option value="zachw">Wednesday, April 15th 2020</option>
+  			<option value="zachj">Thursday, April 16th 2020</option>
+		</select>
+		
+		<label for="barbers">Choose a Time:</label>
+		<select id="barbers">
+  		<option value="paige">11:00 AM</option>
+  			<option value="eddie">11:30 AM</option>
+  			<option value="zachw">12:00 PM</option>
+  			<option value="zachj">12:30 PM</option>
+  			<option value="zachw">1:00 PM</option>
+  			<option value="zachj">1:30 PM</option>
+		</select>
+		
+		
+		<div id=“container”>
+		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="haircut" name="haircut" style="vertical-align:text-bottom;"> Haircut </div>
+		<div style=“float: left”><input type="checkbox" id="haircut" name="haircut"> Beard Trim </div>
+		<div style=“float: left”><input type="checkbox" id="haircut" name="haircut"> Straight Razor Shave </div>
+		<div style=“float: none”><input type="checkbox" id="haircut" name="haircut"> Line Up </div>
+		</div>
+		</form>
+		
+		<button type="submit" form="apptform" value="Submit">Submit</button>
+		
+		
+		
+		<!--<label for="haircut">Haircut</label>
+		<input type="checkbox" id="haircut" name="haircut">
+		
+		<label for="beardtrim">Beard Trim</label>
+		<input type="checkbox" id="beardtrim" name="beardtrim">
+		
+		<label for="straightrazor">Straight Razor Shave</label>
+		<input type="checkbox" id="straightrazor" name="straightrazor">
+		
+		<label for="lineup">Line Up</label>
+		<input type="checkbox" id="lineup" name="lineup" value="Boat">
+		</form>--!>
+		
+          <!--<div id="serviceSelector">
             <label class="selectWrapper">One
               <span class="checkmark"></span>
               <input type="checkbox" checked="checked">
@@ -179,11 +235,11 @@
               <input type="checkbox">
               <span class="checkmark"></span>
             </label>
-          </div>
-        </div>
+          </div>--!>
+        <!---</div>---!>
 
         <div class="rightFloat">
-          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGluZXVwYmFyYmVyc2hvcHBlQGdtYWlsLmNvbQ&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%23C0CA33&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGluZXVwYmFyYmVyc2hvcHBlQGdtYWlsLmNvbQ&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%23C0CA33&amp;color=%2333B679&amp;color=%230B8043" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
       </div>
