@@ -100,6 +100,9 @@ td button{
   border: none;
   color: white;
   text-align: center;
+	padding: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
   cursor: pointer;
 }
 
@@ -157,16 +160,45 @@ table td i{
 	display: none;
 }
 
-#calendarWrapper{
-	
+#apptform{
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
-.rightFloat{
-	float: right;
+#apptform button{
+	margin-top: 5px;
 }
 
-.lefttFloat{
+.apptContainer {
+    margin-left: 20%;
+    position: relative;
+    margin-right: 20%;
+    /* height: 50%; */
+}
+
+.serviceBox div{
+	margin-bottom: 4px;
+}
+
+
+
+.rightFloat {
+    float: left;
+    width: 80%;
+    position: absolute;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.leftFloat{
 	float: left;
+	width:20%;
+}
+
+.apptContainer:after{
+		content:"";
+		display: table;
+		clear: both;
 }
 
 .loader {
