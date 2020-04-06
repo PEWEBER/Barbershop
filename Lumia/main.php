@@ -105,22 +105,22 @@
                   <li class="active">
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
-                  <li><!-- TODO: Make a Events Paige -->
+                  <li>
                     <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
-                  <li><!-- TODO: Make a Sponsors Paige -->
+                  <li>
                     <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
-          <li>
+                  <li>
                     <a href="#"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                      <li><a href="archive.php">Submissions Archive</a></li>
+                      <li><a href="barberview.php">Barber View</a></li>
                       <li><a href="#">Admin Page</a></li>
                       <li><a href="#">Admins only cool club</a></li>
                       <li><a href="#">Admin Store</a></li>
