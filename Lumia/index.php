@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
 
 
-  $query = "select * from User where Username = '".$username."' and Password = '".$password."';";
+  $query = "select * from barberLogin where username = '".$username."' and password = '".$password."';";
 
   //sends the database server the above information about username and password store the response in result
   $result = $db_conn->query($query);
@@ -53,8 +53,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
     $_SESSION['valid_user'] = $username;
 
       //pull from database usertype
-      $query2 = "select UserID from User where Username = '".$username."' and Password = '".$password."';";
-      $query3 = "select Type from User where Username = '".$username."' and Password = '".$password."';";
+      $query2 = "select userID from barberLogin where username = '".$username."' and password = '".$password."';";
+      $query3 = "select type from barberLogin where username = '".$username."' and password = '".$password."';";
 
       $result2 = $db_conn->query($query2);
       $result3 = $db_conn->query($query3);

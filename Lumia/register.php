@@ -2,7 +2,6 @@
 $Fname = $_POST['Fname'];
 $Lname = $_POST['Lname'];
 $Type = (int)$_POST['Type'];
-$eMail = $_POST['eMail'];
 $Username = $_POST['Username'];
 $Password = sha1($_POST['Password']);
     
@@ -23,9 +22,9 @@ $Password = sha1($_POST['Password']);
     // database login: go to this link https://p3nlmysqladm002.secureserver.net/grid55/203/index.php
     // username: paigeweber , password: Bison51#
     
-    $query = "INSERT INTO User(Fname, Lname, Type, eMail, Username, Password) VALUES (?, ?, ?, ?, ?, ?);";
+    $query = "INSERT INTO barberLogin(fname, lname, type, username, password) VALUES (?, ?, ?, ?, ?);";
        $stmt = $db->prepare($query);
-       $stmt->bind_param('ssssss', $Fname, $Lname, $Type, $eMail, $Username, $Password);
+       $stmt->bind_param('sssss', $Fname, $Lname, $Type, $Username, $Password);
        $stmt->execute();
     //----------------------
        $db->close();
