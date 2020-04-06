@@ -154,7 +154,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
                   </li>
                   <li>
                     <a href="barberview.php"><i class="icon-trophy"></i> Barber View</a>
-                </ul>
+                  </ul>
               </nav>
             </div>
             <!-- end menu -->
