@@ -155,7 +155,7 @@
     <section id="maincontent">
       <div class="apptContainer">
         <div class="leftFloat">
-        <form id="apptform">
+        <form id="apptform" action="testRun.php">
           <h5>Let's get you looking fresh</h5>
         <label for="barbers">Choose a Barber:</label>
 		<select id="barbers">
