@@ -155,10 +155,10 @@
     <section id="maincontent">
       <div class="apptContainer">
         <div class="leftFloat">
-        <form id="apptform" action="testRun.php">
+        <form id="apptform" action="testRun.php" method="post">
           <h5>Let's get you looking fresh</h5>
         <label for="barbers">Choose a Barber:</label>
-		<select id="barbers">
+		<select id="barbers" name="barbers">
   		<option value="paige">Paige</option>
   			<option value="eddie">Eddie</option>
   			<option value="zachw">Zach W</option>
@@ -170,7 +170,7 @@
 		<input type="date" id="apptDate" name="apptDate">
 
 		<label for="barbers">Choose a Time:</label>
-		<select id="times">
+		<select id="times" name="time">
   		  <option value="9:00 AM">9:00 AM</option>
   			<option value="9:30 AM">9:30 AM</option>
   			<option value="10:00 PM">10:00 PM</option>
@@ -193,10 +193,10 @@
 
 		<div id=“container” class="serviceBox">
     <label for="barbers">Select Services:</label>
-		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="Haircut" name="Haircut" style="vertical-align:text-bottom;"> Haircut </div>
-		<div style=“float: left”><input type="checkbox" id="Beard Trim" name="Beard Trim"> Beard Trim </div>
-		<div style=“float: left”><input type="checkbox" id="Shave" name="Shave"> Straight Razor Shave </div>
-		<div style=“float: none”><input type="checkbox" id="Line Up" name="Line Up"> Line Up </div>
+		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="Haircut" name="service" value="Haircut" style="vertical-align:text-bottom;"> Haircut </div>
+		<div style=“float: left”><input type="checkbox" id="Beard Trim" name="service" value="Beard Trim"> Beard Trim </div>
+		<div style=“float: left”><input type="checkbox" id="Shave" name="service" value="Straight Razor Shave"> Straight Razor Shave </div>
+		<div style=“float: none”><input type="checkbox" id="Line Up" name="service" value="Line Up"> Line Up </div>
 		</div>
     <button type="submit" form="apptform" value="Submit">Book My Appointment</button>
 		</form>
