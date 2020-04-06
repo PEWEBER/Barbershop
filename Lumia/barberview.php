@@ -1,116 +1,6 @@
-<?php
-session_start();
-
-//if user submits a username and password
-if (isset($_POST['username']) && isset($_POST['password']))
-{
-  //asign username and password values. NOTE: this won't be done until the database is complete
-  // if the user has just tried to log in
-  $username = $_POST['username'];
-  $password = sha1($_POST['password']);
-
-  //connects to the sql server
-  $db_conn = new mysqli('68.178.217.43', 'paigeweber', 'Bison51#', 'paigeweber');
-
-  //if database returns connection error, print to screen with the error and exit the system
-  if (mysqli_connect_errno()) {
-    echo 'Connection to database failed:'.mysqli_connect_error();
-    exit();
-  }
-
-  //this is sent to the server to ask about the username and password
-    //echo $username;
-    //echo $password;
-
-    //e605dbe386d539f6d1ac1efc8ea48437cac0d178
-
-
-
-  $query = "select * from User where Username = '".$username."' and Password = '".$password."';";
-
-  //sends the database server the above information about username and password store the response in result
-  $result = $db_conn->query($query);
-    //echo mysqli_result($result, 2);
-    //echo "nummmmmmmsbruh";
-    //echo $result -> num_rows;
-
-       // if($result -> num_rows > 0)
-     //{
-       //  while ($row = $result->fetch_assoc()) {
-         //    $field1name = $row["Username"];
-           //  $field2name = $row["Password"];
-             //echo '<tr>
-             //<td>'.$field1name.'</td>
-             //<td>'.$field2name.'</td>
-             //</tr>';
-         //}
-     //}
-
-  //if the result returns valid user, start a session with a valid user
-  if ($result->num_rows)
-  {
-    // if they are in the database register the user id
-    $_SESSION['valid_user'] = $username;
-
-      //pull from database usertype
-      $query2 = "select UserID from User where Username = '".$username."' and Password = '".$password."';";
-      $query3 = "select Type from User where Username = '".$username."' and Password = '".$password."';";
-
-      $result2 = $db_conn->query($query2);
-      $result3 = $db_conn->query($query3);
-
-      if($result2 -> num_rows > 0)
-      {
-          while ($row = $result2->fetch_assoc()) {
-              $_SESSION['USERID'] = $row["UserID"];
-              //echo $_SESSION['TYPE'];
-          }
-      }
-
-
-      if($result3 -> num_rows > 0)
-          {
-              while ($row = $result3->fetch_assoc()) {
-                  $_SESSION['TYPE'] = $row["Type"];
-                  //echo $_SESSION['TYPE'];
-              }
-          }
-
-
-
-
-
-      header("Location: main.php");
-      //echo "Session created";
-  }
-
-
-    //if the user gets the right username and password
-      //echo "Session val: ";
-      //echo $_SESSION['valid_user'];
-
-
-      if (isset($userid))
-      {
-        // if they've tried and failed to log in
-        echo '<p>Could not log you in.</p>';
-      }
-  $db_conn->close();
-}
-?>
 <!DOCTYPE html>
 <html>
-  <style>
-    .loginform {
-      width:80%;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .specialLoginForm{
-      width:30%;
-      margin-left:35%;
-    }
-  </style>
+  
 <head>
    <title>Login</title>
       <link rel="shortcut icon" href="assets/ico/must.ico">
@@ -161,34 +51,110 @@ if (isset($_POST['username']) && isset($_POST['password']))
           </div>
         </div>
       </div>
-
 </head>
+
+<style>
+form{
+  text-align: center;
+}
+select{
+  text-align: center;
+  text-align-last: center;
+}
+button{
+  text-align: center;
+}
+iframe{
+  display:block;
+  margin-left:center;
+  margin-right:center;
+}
+.custom-select{
+  position: relative
+  display: block
+  max-width: 400px
+  min-width: 180px
+  margin: 0 auto
+  border: 1px solid #3C1C78
+  background-color: #16013E
+  z-index: 10
+ 
+}
+.button {
+   border-top: 1px solid #2d414d;
+   background: #3b505e;
+   background: -webkit-gradient(linear, left top, left bottom, from(#353e6b), to(#3b505e));
+   background: -webkit-linear-gradient(top, #353e6b, #3b505e);
+   background: -moz-linear-gradient(top, #353e6b, #3b505e);
+   background: -ms-linear-gradient(top, #353e6b, #3b505e);
+   background: -o-linear-gradient(top, #353e6b, #3b505e);
+   padding: 6px 12px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #243440;
+   background: #243440;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #000000;
+   background: #000000;
+    }
+
+.select{
+  border: 
+}
+
+
+}
+
+</style>
+
 <body>
-<form action="index.php" method="post" class="loginform">
-
-<fieldset>
-   <legend>Login</legend>
-   <br><br><br><br><br><br><br>
-   <p><label for="username" class="specialLoginForm">Username:</label>
-   <input type="text" name="username" class="specialLoginForm" size="30"/></p>
-   <p><label for="password" class="specialLoginForm">Password:</label>
-   <input type="password" name="password" class="specialLoginForm" size="30"/></p>
-   </fieldset>
-
-<button type="submit" id="barbButton" class="specialLoginForm" name="login">Login</button>
 <br>
-
+<br>
+<br>
+<form method="post">
+  <select class="custom-select" id="Selection" name="selectedValue">
+    <option>Select</option>
+    <option value="Barber1">Barber 1</option>
+    <option value="Barber2">Barber 2</option>
+    <option value="Barber3">Barber 3</option>
+  </select><br>
+  <input class="button" type="submit" name="Submit">
 </form>
-<p style="text-align: center;">Need an Account?</p>
-<form action="register.html" class="loginform" >
-<button type="submit" id="barbButton" class="specialLoginForm" name="Register for an Account">Register</button>
-</form>
+
+<?php if($_POST['selectedValue'] == "Barber1") : ?>
+  <div margin-left="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTitle=0&amp;mode=WEEK&amp;showPrint=0" text-alignc="center" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+
+<?php elseif($_POST['selectedValue'] == "Barber2") : ?>
+  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;showTitle=0&amp;showPrint=0&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></dv>
+
+<?php elseif($_POST['selectedValue'] == "Barber3") : ?>
+  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showPrint=0&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+<?php endif; ?>
 
 
-
-<br><br><br><br><br><br>
-
+<br>
+<br>
+<br>
+    
+   
+  
 </body>
+
+
 <footer class="footer">
       <div class="container">
         <div class="row">
