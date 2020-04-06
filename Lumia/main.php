@@ -106,16 +106,16 @@
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
+                    <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li><!-- TODO: Make a Sponsors Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
-                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
+                    <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
           <li>
-                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
+                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>

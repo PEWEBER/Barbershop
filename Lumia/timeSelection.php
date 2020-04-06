@@ -75,7 +75,7 @@
 </head>
 
 
-<body onload="userCheck()">
+<body onload="userCheck();">
   <div id="wrapper">
     <header>
       <?php
@@ -102,20 +102,20 @@
             <div class="navigation">
               <nav>
                 <ul class="nav topnav">
-                  <li class="active">
+                  <li>
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
-                  <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
+                  <li class="active"><!-- TODO: Make a Events Paige -->
+                    <a href="timeSelection.php"><i class="icon-calendar"></i> Appointments</a>
                   </li>
-                  <li><!-- TODO: Make a Sponsors Paige -->
+                  <li><!-- TODO: Make a Products Paige -->
                     <a href="#"><i class="icon-cut"></i> Services</a>
                   </li>
                   <li>
-                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
+                    <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
-          <li>
-                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
+                  <li>
+                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
@@ -151,15 +151,63 @@
         </div>
       </div>
     </header>
-
+    <br><br><br>
     <section id="maincontent">
-      <div class="container">
-        <div id="buttonHolder">
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
-          <button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button><button id="barbButton" type="button">7:00</button>
+      <div class="apptContainer">
+        <div class="leftFloat">
+        <form id="apptform" action="testRun.php" method="post">
+          <h5>Let's get you looking fresh</h5>
+        <label for="barbers">Choose a Barber:</label>
+		<select id="barbers" name="barbers">
+  		<option value="paige">Paige</option>
+  			<option value="eddie">Eddie</option>
+  			<option value="zachw">Zach W</option>
+  			<option value="zachj">Zach J</option>
+		</select>
+		<br>
+
+		<label for="barbers">Choose a Date:</label>
+		<input type="date" id="apptDate" name="apptDate">
+
+		<label for="barbers">Choose a Time:</label>
+		<select id="times" name="time">
+  		  <option value="9:00 AM">9:00 AM</option>
+  			<option value="9:30 AM">9:30 AM</option>
+  			<option value="10:00 PM">10:00 PM</option>
+        <option value="10:30 PM">10:30 PM</option>
+  			<option value="11:00 PM">11:00 PM</option>
+  			<option value="11:30 PM">11:30 PM</option>
+        <option value="12:00 PM">12:00 PM</option>
+  			<option value="12:30 PM">12:30 PM</option>
+  			<option value="1:00 PM">1:00 PM</option>
+  			<option value="1:30 PM">1:30 PM</option>
+  			<option value="2:00 PM">2:00 PM</option>
+  			<option value="2:30 PM">2:30 PM</option>
+  			<option value="3:00 PM">3:00 PM</option>
+  			<option value="3:30 PM">3:30 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+  			<option value="4:30 PM">4:30 PM</option>
+  			<option value="5:00 PM">5:00 PM</option>
+		</select>
+
+
+		<div id=“container” class="serviceBox">
+    <label for="barbers">Select Services:</label>
+		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="Haircut" name="service" value="Haircut" style="vertical-align:text-bottom;"> Haircut </div>
+		<div style=“float: left”><input type="checkbox" id="Beard Trim" name="service" value="Beard Trim"> Beard Trim </div>
+		<div style=“float: left”><input type="checkbox" id="Shave" name="service" value="Straight Razor Shave"> Straight Razor Shave </div>
+		<div style=“float: none”><input type="checkbox" id="Line Up" name="service" value="Line Up"> Line Up </div>
+		</div>
+    <button type="submit" form="apptform" value="Submit">Book My Appointment</button>
+		</form>
+  </div>
+        <div class="rightFloat">
+
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGluZXVwYmFyYmVyc2hvcHBlQGdtYWlsLmNvbQ&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%23C0CA33&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="float:right" width="90%" height="100%" frameborder="0" scrolling="no"></iframe>
+
         </div>
       </div>
+      <br><br><br>
     </section>
     <!-- Footer
  ================================================== -->

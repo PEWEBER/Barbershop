@@ -178,11 +178,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 <button type="submit" id="barbButton" class="specialLoginForm" name="login">Login</button>
 <br>
 
-</form>
-<p style="text-align: center;">Need an Account?</p>
-<form action="register.html" class="loginform" >
-<button type="submit" id="barbButton" class="specialLoginForm" name="Register for an Account">Register</button>
-</form>
+<p style="text-align: center;">Need an Account? <a href="register.html" style="color:#909090;">Register</a></p>
+
 
 
 

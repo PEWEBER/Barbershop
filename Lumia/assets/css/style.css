@@ -42,6 +42,10 @@ a i:hover {
 	text-decoration:none;
 }
 
+.centerWrap{
+	text-align: center;
+}
+
 .curSelected{
 	border-radius: 12px;
 	border-color: black;
@@ -90,12 +94,15 @@ td button{
 	margin: auto;
 }
 
-#barbButton{
+.barbButton{
 	background-color: #000000;
 	border-radius: 12px;
   border: none;
   color: white;
   text-align: center;
+	padding: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
   cursor: pointer;
 }
 
@@ -148,8 +155,50 @@ table td i{
 	color:white;
 }
 
+
 #prsntID{
 	display: none;
+}
+
+#apptform{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#apptform button{
+	margin-top: 5px;
+}
+
+.apptContainer {
+    margin-left: 20%;
+    position: relative;
+    margin-right: 20%;
+    /* height: 50%; */
+}
+
+.serviceBox div{
+	margin-bottom: 4px;
+}
+
+
+
+.rightFloat {
+    float: left;
+    width: 80%;
+    position: absolute;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.leftFloat{
+	float: left;
+	width:20%;
+}
+
+.apptContainer:after{
+		content:"";
+		display: table;
+		clear: both;
 }
 
 .loader {
@@ -1981,6 +2030,8 @@ h2.error {
 .priceBox hr {
   margin: 0;
 }
+
+
 .priceBox span {
   display: block;
   padding: 10px 0;
