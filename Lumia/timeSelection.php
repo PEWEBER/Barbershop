@@ -171,25 +171,25 @@
 
 		<label for="barbers">Choose a Time:</label>
 		<select id="times" name="time">
-  		  <option value="9:00 AM">9:00 AM</option>
-  			<option value="9:30 AM">9:30 AM</option>
-  			<option value="10:00 PM">10:00 PM</option>
-        <option value="10:30 PM">10:30 PM</option>
-  			<option value="11:00 PM">11:00 PM</option>
-  			<option value="11:30 PM">11:30 PM</option>
-        <option value="12:00 PM">12:00 PM</option>
-  			<option value="12:30 PM">12:30 PM</option>
-  			<option value="1:00 PM">1:00 PM</option>
-  			<option value="1:30 PM">1:30 PM</option>
-  			<option value="2:00 PM">2:00 PM</option>
-  			<option value="2:30 PM">2:30 PM</option>
-  			<option value="3:00 PM">3:00 PM</option>
-  			<option value="3:30 PM">3:30 PM</option>
-        <option value="4:00 PM">4:00 PM</option>
-  			<option value="4:30 PM">4:30 PM</option>
-  			<option value="5:00 PM">5:00 PM</option>
+  		  <option value="9:00">9:00 AM</option>
+  			<option value="9:30">9:30 AM</option>
+  			<option value="10:00">10:00 AM</option>
+        <option value="10:30">10:30 AM</option>
+  			<option value="11:00">11:00 AM</option>
+  			<option value="11:30">11:30 AM</option>
+        <option value="12:00">12:00 PM</option>
+  			<option value="12:30">12:30 PM</option>
+  			<option value="13:00">1:00 PM</option>
+  			<option value="13:30">1:30 PM</option>
+  			<option value="14:00">2:00 PM</option>
+  			<option value="14:30">2:30 PM</option>
+  			<option value="15:00">3:00 PM</option>
+  			<option value="15:30">3:30 PM</option>
+        <option value="16:00">4:00 PM</option>
+  			<option value="16:30">4:30 PM</option>
+  			<option value="17:00">5:00 PM</option>
 		</select>
-
+		<br>
 
 		<div id=“container” class="serviceBox">
     <label for="barbers">Select Services:</label>
@@ -198,6 +198,12 @@
 		<div style=“float: left”><input type="checkbox" id="Shave" name="service" value="Straight Razor Shave"> Straight Razor Shave </div>
 		<div style=“float: none”><input type="checkbox" id="Line Up" name="service" value="Line Up"> Line Up </div>
 		</div>
+		<br>
+		
+		  <label for="special">Special Instructions:</label>
+		  <textarea name="special" rows="5" cols="15"></textarea>
+		  
+		  
     <button type="submit" form="apptform" value="Submit">Book My Appointment</button>
 		</form>
   </div>
