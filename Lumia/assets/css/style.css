@@ -59,6 +59,12 @@ a i:hover {
 	color: black;
 }
 
+.services{
+	font-size: 20px;
+}
+.service{
+	min-height: 35px;
+}
 /* Wrapper for boxed template
 #wrapper {
 	width:1000px;

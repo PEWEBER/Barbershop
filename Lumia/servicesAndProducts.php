@@ -159,25 +159,25 @@
             <!-- Place somewhere in the <body> of your page -->
             <div id="mainslider" class="flexslider">
               <ul class="slides">
-                <li data-thumb="assets/img/slides/flexslider/img1.jpg">
-                  <img src="assets/img/barber.jpg" alt="" />
+                <li data-thumb="assets/img/pommade.jpg">
+                  <img src="assets/img/pommade.jpg" alt="" />
                   <div class="flex-caption primary">
-                    <h2>Professional Touch</h2>
-                    <p>Meet our team of talented staff</p>
+                    <h2>Pommade</h2>
+                    <p>Nature's Remedy Balm</p>
                   </div>
                 </li>
-                <li data-thumb="assets/img/sponsors.jpg">
-                  <img src="assets/img/products.jpg" alt="" />
+                <li data-thumb="assets/img/shaving-cream.jpg">
+                  <img src="assets/img/shaving-cream.jpg" alt="" />
                   <div class="flex-caption warning">
-                    <h2>Top qualtity products!</h2>
-                    <p>Browse our stock in the store!</p>
+                    <h2>Shaving Cream</h2>
+                    <p>The Holy Black New York Traditional</p>
                   </div>
                 </li>
-                <li data-thumb="assets/img/slides/flexslider/img3.jpg">
-                  <img src="assets/img/styles.jpeg" alt="" />
-                  <div class="flex-caption success">
-                    <h2>A style for everyone</h2>
-                    <p>Find the one that fits you!</p>
+                <li data-thumb="assets/img/comb.jpg">
+                  <img src="assets/img/comb.jpg" alt="" />
+                  <div class="flex-caption warning">
+                    <h2>Combs</h2>
+                    <p>Stylish combs for stylish people</p>
                   </div>
                 </li>
               </ul>
@@ -185,26 +185,28 @@
           </div>
         </div>
       </div>
-
     </section>
+	
     <section id="maincontent">
       <div class="container">
 
         <div class="row">
           <div class="span12">
             <div class="call-action">
-
-              <div class="text">
-                <h2>Get started by setting up an appointment today</h2>
-                <p>
-                  Freshen up your look on your schedule.
-                </p>
-              </div>
-              <div class="cta">
-                <a class="btn btn-large btn-theme" href="submit.php">
-							<i class="icon-calendar icon-white"></i> Book a cut </a>
-              </div>
-
+              <dl class="services">
+			  <dt class="service">Haircut - $23</dt>
+				<dd>Mens haircut with clippers and or scissors includes a steamed
+				hot towel and straight razor neck shave.</dd><br>
+			  <dt class="service">Beard Trim - $12/$18</dt>
+				<dd>Edge up the beard using clippers or scissors followed 
+				by clipper or straight razor finish with a touch of aftershave.</dd><br>
+			  <dt class="service">Straight Razor Shave - $25</dt>
+				<dd>Treat your self to a deluxe face or head shave includes steamed 
+				hot towels face moisturizing lotion and a splash of clubman aftershave.</dd><br>
+			  <dt class="service">Line Up - $12</dt>
+				<dd>Need to look clean but dont need a haircut? 
+				Trim the side burns around the ears and neck includes a hot towel and neck shave.</dd>
+			  </ul>
             </div>
             <!-- end tagline -->
           </div>
