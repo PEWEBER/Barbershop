@@ -44,44 +44,47 @@
     <link href="assets/color/default.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
-
-    <div class="navbar navbar-static-top">
-		<div class="navbar-inner">
-		  <div class="container">
-			<!-- logo -->
-			<div class="logo">
-			  <a href="main.php"><img src="assets/img/lipscomb-logo.png" width=250 height=100 alt="" /></a>
-			</div>
-			<!-- end logo -->
-
-			<!-- top menu -->
-			<div class="navigation">
-			  <nav>
-				<ul class="nav topnav">
-				  <li>
-					<a href="main.php"><i class="icon-home"></i> Home </a>
-				  </li>
-				  <li><!-- TODO: Make a Events Paige -->
-					<a href="#"><i class="icon-calendar"></i> Events</a>
-				  </li>
-				  <li><!-- TODO: Make a Sponsors Paige -->
-					<a href="#"><i class="icon-money"></i> Sponsors</a>
-				  </li>
-				  <li>
-					<a href="submit.php"><i class="icon-pencil"></i> Submissions</a>
-				  </li>
-				  <li>
-					<a href="contact.php"><i class="icon-envelope-alt"></i> Contact</a>
-				  </li>
-				</ul>
-			  </nav>
-			</div>
-			<!-- end menu -->
-		  </div>
-		</div>
-    </div>
 </head>
 <body>
+  <div id="wrapper">
+	<header>
+	  <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="main.php"><img src="assets/img/Lineup.png" alt="" /></a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li>
+                    <a href="main.php"><i class="icon-home"></i> Home </a>
+                  </li>
+                  <li>
+                    <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
+                  </li>
+                  <li>
+                    <a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
+                  </li>
+                  <li>
+                    <a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+
+          </div>
+        </div>
+      </div>
+    </header>
    <form action="register.php" method="post">
    <fieldset class="specialLoginForm">
     <legend>Register</legend>
@@ -161,6 +164,7 @@
         </div>
       </div>
     </footer>
+  </div>
 </html>
 
     

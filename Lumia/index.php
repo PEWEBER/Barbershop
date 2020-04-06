@@ -204,7 +204,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
                     <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-cut"></i> Services</a>
+                    <a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
                   </li>
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
