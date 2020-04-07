@@ -201,7 +201,7 @@
                 </p>
               </div>
               <div class="cta">
-                <a class="btn btn-large btn-theme" href="submit.php">
+                <a class="btn btn-large btn-theme" href="timeSelection.php">
 							<i class="icon-calendar icon-white"></i> Book a cut </a>
               </div>
 

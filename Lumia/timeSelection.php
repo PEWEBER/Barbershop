@@ -203,8 +203,7 @@
 		  <label for="special">Special Instructions:</label>
 		  <textarea name="special" rows="5" cols="15"></textarea>
 		  
-		  
-    <button type="submit" form="apptform" value="Submit">Book My Appointment</button>
+    <button type="submit" class="btn btn-theme" form="apptform" value="Submit">Book My Appointment</button>
 		</form>
   </div>
         <div class="rightFloat">

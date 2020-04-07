@@ -76,10 +76,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
               }
           }
 
-
-
-
-
       header("Location: main.php");
       //echo "Session created";
   }
@@ -266,7 +262,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 				</address>
               <p>
                 <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                <i class="icon-envelope-alt"></i> freshcutz@lineup.com
+                <i class="icon-envelope-alt"></i> lineupbarbershoppe@gmail.com
               </p>
             </div>
             <div class="widget">

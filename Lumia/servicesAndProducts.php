@@ -160,21 +160,21 @@
             <div id="mainslider" class="flexslider">
               <ul class="slides">
                 <li data-thumb="assets/img/pommade.jpg">
-                  <img src="assets/img/pommade.jpg" alt="" />
+                  <img src="assets/img/pommade.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption primary">
                     <h2>Pommade</h2>
                     <p>Nature's Remedy Balm</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/shaving-cream.jpg">
-                  <img src="assets/img/shaving-cream.jpg" alt="" />
+                  <img src="assets/img/shaving.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption warning">
                     <h2>Shaving Cream</h2>
                     <p>The Holy Black New York Traditional</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/comb.jpg">
-                  <img src="assets/img/comb.jpg" alt="" />
+                  <img src="assets/img/combs.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption warning">
                     <h2>Combs</h2>
                     <p>Stylish combs for stylish people</p>
