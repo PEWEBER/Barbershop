@@ -98,7 +98,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 <html>
   <style>
     .loginform {
-      width:80%;
+      width:100%;
       margin-left:auto;
       margin-right:auto;
     }
@@ -217,13 +217,10 @@ if (isset($_POST['username']) && isset($_POST['password']))
                       }
                     ?>
                   </li>
-<<<<<<< HEAD
                   <li>
                     <a href="barberview.php"><i class="icon-trophy"></i> Barber View</a>
                   </ul>
-=======
                 </ul>
->>>>>>> 2064f208c4d69905da65474ef31fb75320221130
               </nav>
             </div>
             <!-- end menu -->
