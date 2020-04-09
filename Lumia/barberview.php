@@ -14,43 +14,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
 
-      <div class="navbar navbar-static-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <!-- logo -->
-            <div class="logo">
-              <a href="main.php"><img src="assets/img/Lineup.png" width=250 height=100 alt="" /></a>
-            </div>
-            <!-- end logo -->
-
-            <!-- top menu -->
-            <div class="navigation">
-              <nav>
-                <ul class="nav topnav">
-                  <li>
-                    <a href="main.php"><i class="icon-home"></i> Home </a>
-                  </li>
-                  <li><!-- TODO: Make a Events Paige -->
-                    <a href="#"><i class="icon-calendar"></i> Appointments</a>
-                  </li>
-                  <li><!-- TODO: Make a Sponsors Paige -->
-                    <a href="#"><i class="icon-cut"></i> Services</a>
-                  </li>
-                  <li>
-                    <a href="submit.php"><i class="icon-tag"></i> The Store</a>
-                  </li>
-				          <li>
-                    <a href="contact.php"><i class="icon-trophy"></i> Rewards</a>
-                  </li>
-                  <li>
-                    <a href="barberview.php"><i class="icon-trophy"></i> Barber View</a>
-                </ul>
-              </nav>
-            </div>
-            <!-- end menu -->
-          </div>
-        </div>
-      </div>
+      
 </head>
 
 <style>
@@ -120,6 +84,69 @@ button{
 </style>
 
 <body>
+<header>
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+	  <div class="container">
+		<!-- logo -->
+		<div class="logo">
+		  <a href="main.php"><img src="assets/img/Lineup.png" alt="" /></a>
+		</div>
+		<!-- end logo -->
+
+		<!-- top menu -->
+		<div class="navigation">
+		  <nav>
+			<ul class="nav topnav">
+			  <li>
+				<a href="main.php"><i class="icon-home"></i> Home </a>
+			  </li>
+			  <li>
+				<a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
+			  </li>
+			  <li>
+				<a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
+			  </li>
+			  <li>
+				<a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
+			  </li>
+			  <li>
+				<a href="#"><i class="icon-trophy"></i> Rewards</a>
+			  </li>
+			  <li class="dropdown" id="adminMenu">
+				<a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
+				<ul class="dropdown-menu">
+				  <li class="active"><a href="barberview.php">Barber View</a></li>
+				  <li><a href="#">Admin Page</a></li>
+				  <li><a href="#">Admins only cool club</a></li>
+				  <li><a href="#">Admin Store</a></li>
+				</ul>
+			  </li>
+			  <li class="dropdown" id="reviewMenu">
+				<a href="#"><i class="icon-book"></i>Reviewer Menu<i class="icon-angle-down"></i></a>
+				<ul class="dropdown-menu">
+				  <li><a href="revieweSubs.php">Review Submissions</a></li>
+
+				</ul>
+			  </li>
+			  <li>
+				<?php
+				  if(isset($_SESSION['USERID'])){
+					echo '<a href="main.php?logout=true" onclick="LogOut()"><i class="icon-lock"></i> Logout </a>';
+				  }else{
+					echo '<a href="index.php"><i class="icon-key"></i> Login </a>';
+				  }
+				?>
+			  </li>
+			</ul>
+		  </nav>
+		</div>
+		<!-- end menu -->
+
+	  </div>
+	</div>
+  </div>
+</header>
 <br>
 <br>
 <br>

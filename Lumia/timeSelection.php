@@ -109,7 +109,7 @@
                     <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-cut"></i> Services</a>
+                    <a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
                   </li>
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
@@ -203,8 +203,7 @@
 		  <label for="special">Special Instructions:</label>
 		  <textarea name="special" rows="5" cols="15"></textarea>
 		  
-		  
-    <button type="submit" form="apptform" value="Submit">Book My Appointment</button>
+    <button type="submit" class="btn btn-theme" form="apptform" value="Submit">Book My Appointment</button>
 		</form>
   </div>
         <div class="rightFloat">

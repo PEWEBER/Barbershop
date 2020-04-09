@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
 
 
-  $query = "select * from User where Username = '".$username."' and Password = '".$password."';";
+  $query = "select * from barberLogin where username = '".$username."' and password = '".$password."';";
 
   //sends the database server the above information about username and password store the response in result
   $result = $db_conn->query($query);
@@ -53,8 +53,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
     $_SESSION['valid_user'] = $username;
 
       //pull from database usertype
-      $query2 = "select UserID from User where Username = '".$username."' and Password = '".$password."';";
-      $query3 = "select Type from User where Username = '".$username."' and Password = '".$password."';";
+      $query2 = "select userID from barberLogin where username = '".$username."' and password = '".$password."';";
+      $query3 = "select type from barberLogin where username = '".$username."' and password = '".$password."';";
 
       $result2 = $db_conn->query($query2);
       $result3 = $db_conn->query($query3);
@@ -75,10 +75,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
                   //echo $_SESSION['TYPE'];
               }
           }
-
-
-
-
 
       header("Location: main.php");
       //echo "Session created";
@@ -204,7 +200,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
                     <a href="timeSelection.php""><i class="icon-calendar"></i> Appointments</a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-cut"></i> Services</a>
+                    <a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
                   </li>
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
@@ -272,7 +268,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 				</address>
               <p>
                 <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                <i class="icon-envelope-alt"></i> freshcutz@lineup.com
+                <i class="icon-envelope-alt"></i> lineupbarbershoppe@gmail.com
               </p>
             </div>
             <div class="widget">
