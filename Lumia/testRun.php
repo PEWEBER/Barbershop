@@ -22,6 +22,7 @@
       var date = "<?php echo $_POST['apptDate']; ?>";
       var time = "<?php echo $_POST['time']; ?>";
       var service = "<?php echo $_POST['service']; ?>";
+      var special = "<?php echo $_POST['special']; ?>";
 
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '971950683471-6jrtv1sjbo39076ddqhibknh2cm1a8ji.apps.googleusercontent.com';
@@ -32,7 +33,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar";
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
@@ -112,26 +113,32 @@
        * Print the summary and start datetime/date of the next ten events in
        * the authorized user's calendar. If no events are found an
        * appropriate message is printed.
-       */
+		1`       */
+		
+		
+		console.log(calendarList.get("lineupbarbershoppe@gmail.com"));
+		
+		var startDateTime = date + "T" + time + "-07:00";
+		//endDateTime = date + "T" + + "-07:00";
       function createEvent() {
         var event = {
-        'summary': 'Google I/O 2015',
+        'summary': special,
         'location': '800 Howard St., San Francisco, CA 94103',
-        'description': 'A chance to hear more about Google\'s developer products.',
+        'description': service,
         'start': {
-          'dateTime': '2015-05-28T09:00:00-07:00',
+          'dateTime': startDateTime,
           'timeZone': 'America/Los_Angeles'
         },
         'end': {
-          'dateTime': '2015-05-28T17:00:00-07:00',
+          'dateTime': '2020-04-06T17:00:00-07:00',
           'timeZone': 'America/Los_Angeles'
         },
-        'recurrence': [
+        /*'recurrence': [
           'RRULE:FREQ=DAILY;COUNT=2'
-        ],
+        ],*/
         'attendees': [
-          {'email': 'lpage@example.com'},
-          {'email': 'sbrin@example.com'}
+          {'email': 'lineupbarbershoppe@gmail.com'},
+          //{'email': 'sbrin@example.com'}
         ],
         'reminders': {
           'useDefault': false,
@@ -143,7 +150,7 @@
       };
 
       var request = gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
+        'calendarId': 'lineupbarbershoppe@gmail.com',
         'resource': event
       });
 
