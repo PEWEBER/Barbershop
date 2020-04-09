@@ -54,6 +54,9 @@
 </head>
 
 <style>
+
+
+
 form{
   text-align: center;
 }
@@ -63,11 +66,6 @@ select{
 }
 button{
   text-align: center;
-}
-iframe{
-  display:block;
-  margin-left:center;
-  margin-right:center;
 }
 .custom-select{
   position: relative
@@ -135,14 +133,14 @@ iframe{
   <input class="button" type="submit" name="Submit">
 </form>
 
-<?php if($_POST['selectedValue'] == "Barber1") : ?>
-  <div margin-left="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTitle=0&amp;mode=WEEK&amp;showPrint=0" text-alignc="center" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+<?php if(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber1") : ?>
+  <div margin-left="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTitle=0&amp;mode=WEEK&amp;showPrint=0" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
 
-<?php elseif($_POST['selectedValue'] == "Barber2") : ?>
-  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;showTitle=0&amp;showPrint=0&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></dv>
+<?php elseif(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber2") : ?>
+  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;showTitle=0&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></dv>
 
-<?php elseif($_POST['selectedValue'] == "Barber3") : ?>
-  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showPrint=0&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+<?php elseif(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber3") : ?>
+  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
 <?php endif; ?>
 
 

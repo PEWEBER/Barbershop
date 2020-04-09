@@ -116,7 +116,7 @@
 		1`       */
 		
 		
-		console.log(calendarList.get("lineupbarbershoppe@gmail.com"));
+		//console.log(calendarList.get("lineupbarbershoppe@gmail.com"));
 		
 		var startDateTime = date + "T" + time + "-07:00";
 		//endDateTime = date + "T" + + "-07:00";
