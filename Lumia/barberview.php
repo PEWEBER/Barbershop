@@ -111,7 +111,7 @@ button{
 				<a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
 			  </li>
 			  <li>
-				<a href="#"><i class="icon-trophy"></i> Rewards</a>
+				<a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
 			  </li>
 			  <li class="dropdown" id="adminMenu">
 				<a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>

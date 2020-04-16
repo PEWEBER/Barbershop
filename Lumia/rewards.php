@@ -102,7 +102,7 @@
             <div class="navigation">
               <nav>
                 <ul class="nav topnav">
-                  <li class="active">
+                  <li>
                     <a href="main.php"><i class="icon-home"></i> Home </a>
                   </li>
                   <li>
@@ -114,7 +114,7 @@
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
@@ -152,66 +152,51 @@
       </div>
     </header>
     <section id="intro">
-
       <div class="container">
+	  
         <div class="row">
           <div class="span12">
-            <!-- Place somewhere in the <body> of your page -->
-            <div id="mainslider" class="flexslider">
-              <ul class="slides">
-                <li data-thumb="assets/img/slides/flexslider/img1.jpg">
-                  <img src="assets/img/barber.jpg" alt="" />
-                  <div class="flex-caption primary">
-                    <h2>Professional Touch</h2>
-                    <p>Meet our team of talented staff</p>
-                  </div>
-                </li>
-                <li data-thumb="assets/img/sponsors.jpg">
-                  <img src="assets/img/products.jpg" alt="" />
-                  <div class="flex-caption warning">
-                    <h2>Top qualtity products!</h2>
-                    <p>Browse our stock in the store!</p>
-                  </div>
-                </li>
-                <li data-thumb="assets/img/slides/flexslider/img3.jpg">
-                  <img src="assets/img/styles.jpeg" alt="" />
-                  <div class="flex-caption success">
-                    <h2>A style for everyone</h2>
-                    <p>Find the one that fits you!</p>
-                  </div>
-                </li>
-              </ul>
+            <div class="center">
+              <h1>Rewards Program</h1>
+			  <h4>Frequent customers can redeem loyalty points for various awards.</h4>
             </div>
           </div>
         </div>
+		
       </div>
-
     </section>
+	
     <section id="maincontent">
       <div class="container">
-
         <div class="row">
-          <div class="span12">
+          <div class="span6">
             <div class="call-action">
-
-              <div class="text">
-                <h2>Get started by setting up an appointment today</h2>
-                <p>
-                  Freshen up your look on your schedule.
-                </p>
-              </div>
-              <div class="cta">
-                <a class="btn btn-large btn-theme" href="timeSelection.php">
-							<i class="icon-calendar icon-white"></i> Book a cut </a>
-              </div>
-
+              <h3>Gifted Shave - 150</h3>
+			  <p class="reward">Gift a friend their first straight razor experience.</p>
             </div>
-            <!-- end tagline -->
+          </div>
+		  <div class="span6">
+            <div class="call-action">
+              <h3>$5 Back - 100</h3>
+			  <p class="reward">Take $5 off the cost of your next visit.</p>
+            </div>
           </div>
         </div>
-
-
-
+		 
+        <div class="row">
+          <div class="span6">
+            <div class="call-action">
+              <h3>Home Care Package - 200</h3>
+			  <p class="reward">Receive a collection of hair and beard products to keep you looking and feeling your best between visits.</p>
+            </div>
+          </div>
+		  <div class="span6">
+            <div class="call-action">
+              <h3></h3>
+			  <p class="reward"></p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>

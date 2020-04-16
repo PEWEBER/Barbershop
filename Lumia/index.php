@@ -206,7 +206,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
           <li>
-                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
+                    <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="active">
                     <?php

@@ -115,7 +115,7 @@
                     <a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-trophy"></i> Rewards</a>
+                    <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
                   <li class="dropdown" id="adminMenu">
                     <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
@@ -163,14 +163,14 @@
                   <img src="assets/img/pommade.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption primary">
                     <h2>Pommade</h2>
-                    <p>Nature's Remedy Balm</p>
+                    <p>For a slick look</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/shaving-cream.jpg">
                   <img src="assets/img/shaving.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption warning">
                     <h2>Shaving Cream</h2>
-                    <p>The Holy Black New York Traditional</p>
+                    <p>Bring the barbershop to you.</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/comb.jpg">
