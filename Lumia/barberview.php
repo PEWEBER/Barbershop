@@ -1,7 +1,11 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   
 <head>
+
    <title>Login</title>
       <link rel="shortcut icon" href="assets/ico/must.ico">
       <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -14,7 +18,18 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
 
-      
+
+<script src="assets/js/SENG5.js"></script>
+ <script type="text/javascript">
+      function userCheck(){
+        var userType="<?php echo $_SESSION['TYPE']; ?>";
+        userType = parseInt(userType);
+        if(userType == 2){
+          showAdmin();
+        }
+      }
+
+  </script>     
 </head>
 
 <style>
@@ -83,7 +98,7 @@ button{
 
 </style>
 
-<body>
+<body onload="userCheck()">
 <header>
 <div class="navbar navbar-static-top">
 	<div class="navbar-inner">
@@ -113,22 +128,9 @@ button{
 			  <li>
 				<a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
 			  </li>
-			  <li class="dropdown" id="adminMenu">
-				<a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
-				<ul class="dropdown-menu">
-				  <li class="active"><a href="barberview.php">Barber View</a></li>
-				  <li><a href="#">Admin Page</a></li>
-				  <li><a href="#">Admins only cool club</a></li>
-				  <li><a href="#">Admin Store</a></li>
-				</ul>
-			  </li>
-			  <li class="dropdown" id="reviewMenu">
-				<a href="#"><i class="icon-book"></i>Reviewer Menu<i class="icon-angle-down"></i></a>
-				<ul class="dropdown-menu">
-				  <li><a href="revieweSubs.php">Review Submissions</a></li>
-
-				</ul>
-			  </li>
+				<li id="adminMenu">
+                    <a href="barberview.php"><i class="icon-book"></i>View My Schedule</a>
+                  </li>
 			  <li>
 				<?php
 				  if(isset($_SESSION['USERID'])){
@@ -150,25 +152,18 @@ button{
 <br>
 <br>
 <br>
-<form method="post">
-  <select class="custom-select" id="Selection" name="selectedValue">
-    <option>Select</option>
-    <option value="Barber1">Barber 1</option>
-    <option value="Barber2">Barber 2</option>
-    <option value="Barber3">Barber 3</option>
-  </select><br>
-  <input class="button" type="submit" name="Submit">
-</form>
+<?php 
+echo $_SESSION['USERID'];
+if($_SESSION['USERID'] == "2")
+  echo '<div margin-left="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTitle=0&amp;mode=WEEK&amp;showPrint=0" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>';
+  
+elseif($_SESSION['USERID'] == "5")
+  echo '<div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;showTitle=0&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>';
 
-<?php if(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber1") : ?>
-  <div margin-left="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTitle=0&amp;mode=WEEK&amp;showPrint=0" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+elseif($_SESSION['USERID'] == "6")
+  echo '<div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>';
 
-<?php elseif(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber2") : ?>
-  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F4511E&amp;showTitle=0&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></dv>
-
-<?php elseif(isset($_POST['selectedValue']) && $_POST['selectedValue'] == "Barber3") : ?>
-  <div text-align="center"><iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showPrint=0&amp;mode=WEEK" style="position:relative;left:18%;" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
-<?php endif; ?>
+ ?>
 
 
 <br>

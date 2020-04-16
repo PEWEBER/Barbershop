@@ -62,7 +62,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
       if($result2 -> num_rows > 0)
       {
           while ($row = $result2->fetch_assoc()) {
-              $_SESSION['USERID'] = $row["UserID"];
+              $_SESSION['USERID'] = $row["userID"];
               //echo $_SESSION['TYPE'];
           }
       }
@@ -71,7 +71,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
       if($result3 -> num_rows > 0)
           {
               while ($row = $result3->fetch_assoc()) {
-                  $_SESSION['TYPE'] = $row["Type"];
+                  $_SESSION['TYPE'] = $row["type"];
                   //echo $_SESSION['TYPE'];
               }
           }
@@ -156,11 +156,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
       function userCheck(){
         var userType="<?php echo $_SESSION['TYPE']; ?>";
         userType = parseInt(userType);
-        if(userType == 5){
-          showAdmin();
-        }
         if(userType == 2){
-          showReview();
+          showAdmin();
         }
       }
 
@@ -205,8 +202,11 @@ if (isset($_POST['username']) && isset($_POST['password']))
                   <li>
                     <a href="contact.php"><i class="icon-tag"></i> The Store</a>
                   </li>
-          <li>
+          		<li>
                     <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
+                  </li>
+                  <li id="adminMenu">
+                    <a href="barberview.php"><i class="icon-book"></i>View My Schedule</a>
                   </li>
                   <li class="active">
                     <?php
@@ -218,7 +218,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
                     ?>
                   </li>
                   <li>
-                    <a href="barberview.php"><i class="icon-trophy"></i> Barber View</a>
                   </ul>
                 </ul>
               </nav>

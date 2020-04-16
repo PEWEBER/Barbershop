@@ -63,11 +63,8 @@
       function userCheck(){
         var userType="<?php echo $_SESSION['TYPE']; ?>";
         userType = parseInt(userType);
-        if(userType == 5){
-          showAdmin();
-        }
         if(userType == 2){
-          showReview();
+          showAdmin();
         }
       }
 
@@ -117,21 +114,8 @@
                   <li>
                     <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
-                  <li class="dropdown" id="adminMenu">
-                    <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="barberview.php">Barber View</a></li>
-                      <li><a href="#">Admin Page</a></li>
-                      <li><a href="#">Admins only cool club</a></li>
-                      <li><a href="#">Admin Store</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown" id="reviewMenu">
-                    <a href="#"><i class="icon-book"></i>Reviewer Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="revieweSubs.php">Review Submissions</a></li>
-
-                    </ul>
+                  <li id="adminMenu">
+                    <a href="barberview.php"><i class="icon-book"></i>View My Schedule</a>
                   </li>
                   <li>
                     <?php
@@ -163,14 +147,14 @@
                   <img src="assets/img/pommade.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption primary">
                     <h2>Pommade</h2>
-                    <p>For a slick look</p>
+                    <p>Nature's Remedy Balm</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/shaving-cream.jpg">
                   <img src="assets/img/shaving.jpg" alt="" style="width:100%;height:600px;"/>
                   <div class="flex-caption warning">
                     <h2>Shaving Cream</h2>
-                    <p>Bring the barbershop to you.</p>
+                    <p>The Holy Black New York Traditional</p>
                   </div>
                 </li>
                 <li data-thumb="assets/img/comb.jpg">
@@ -232,7 +216,7 @@
          </address>
                <p>
                  <i class="icon-phone"></i> (615) 966-5082 ext. 5082<br>
-                 <i class="icon-envelope-alt"></i> freshcutz@lineup.com
+                 <i class="icon-envelope-alt"></i> lineupbarbershoppe@gmail.com
                </p>
              </div>
              <div class="widget">

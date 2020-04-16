@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,11 +83,8 @@
       function userCheck(){
         var userType="<?php echo $_SESSION['TYPE']; ?>";
         userType = parseInt(userType);
-        if(userType == 5){
-          showAdmin();
-        }
         if(userType == 2){
-          showReview();
+          showAdmin();
         }
       }
 
@@ -129,26 +129,13 @@
                     <a href="servicesAndProducts.php"><i class="icon-cut"></i> Services & Products</a>
                   </li>
                   <li class="active">
-                    <a href="contact.php"><i class="icon-tag"></i> The Store</a>
+                    <a href="contact.php"><i class="icon-tag"></i> Contact Us</a>
                   </li>
                   <li>
                     <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
-                  <li class="dropdown" id="adminMenu">
-                    <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="barberview.php">Barber View</a></li>
-                      <li><a href="#">Admin Page</a></li>
-                      <li><a href="#">Admins only cool club</a></li>
-                      <li><a href="#">Admin Store</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown" id="reviewMenu">
-                    <a href="#"><i class="icon-book"></i>Reviewer Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="revieweSubs.php">Review Submissions</a></li>
-
-                    </ul>
+                   <li id="adminMenu">
+                    <a href="barberview.php"><i class="icon-book"></i>View My Schedule</a>
                   </li>
                   <li>
                     <?php
@@ -234,7 +221,7 @@
                   <textarea class="input-block-level" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                   <div class="text-center">
-                    <button class="btn btn-theme" type="submit">Send a message</button>
+                    <input class="btn btn-theme" type="submit" value="Send a message">
                   </div>
                 </div>
               </div>

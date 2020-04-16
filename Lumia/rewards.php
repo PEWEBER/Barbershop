@@ -63,11 +63,8 @@
       function userCheck(){
         var userType="<?php echo $_SESSION['TYPE']; ?>";
         userType = parseInt(userType);
-        if(userType == 5){
-          showAdmin();
-        }
         if(userType == 2){
-          showReview();
+          showAdmin();
         }
       }
 
@@ -117,21 +114,8 @@
                   <li class="active">
                     <a href="rewards.php"><i class="icon-trophy"></i> Rewards</a>
                   </li>
-                  <li class="dropdown" id="adminMenu">
-                    <a href="#"><i class="icon-book"></i>Admin Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="barberview.php">Barber View</a></li>
-                      <li><a href="#">Admin Page</a></li>
-                      <li><a href="#">Admins only cool club</a></li>
-                      <li><a href="#">Admin Store</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown" id="reviewMenu">
-                    <a href="#"><i class="icon-book"></i>Reviewer Menu<i class="icon-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="revieweSubs.php">Review Submissions</a></li>
-
-                    </ul>
+                  <li id="adminMenu">
+                    <a href="barberview.php"><i class="icon-book"></i>View My Schedule</a>
                   </li>
                   <li>
                     <?php
@@ -192,8 +176,8 @@
           </div>
 		  <div class="span6">
             <div class="call-action">
-              <h3></h3>
-			  <p class="reward"></p>
+              <h3>Free Haircut - 500</h3>
+			  <p class="reward">Recieve any haircut of your choice for free! Thanks for being a valued customer.</p>
             </div>
           </div>
         </div>
