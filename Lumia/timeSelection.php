@@ -78,9 +78,9 @@
       <?php
         if(isset($_GET['uploadsuccess'])){
           if($_GET['uploadsuccess']== 'true'){
-            echo'<div id="errorDiv"><span>Uploaded Successfully</span><span id="dismiss" onclick="dismiss(this.parentNode.id)">x</span></div>';
+            echo'<div id="errorDiv"><span>Booking Successfull</span><span id="dismiss" onclick="dismiss(this.parentNode.id)">x</span></div>';
           }else{
-            echo'<div id="errorDivF"><span>There Was An ERROR Uploading</span><span id="dismiss" onclick="dismiss(this.parentNode.id)">x</span></div>';
+            echo'<div id="errorDivF"><span>There Was An ERROR booking your appointment</span><span id="dismiss" onclick="dismiss(this.parentNode.id)">x</span></div>';
           }
         }
        ?>
@@ -150,7 +150,7 @@
 		<br>
 
 		<label for="barbers">Choose a Date:</label>
-		<input type="date" id="apptDate" name="apptDate">
+		<input type="date" id="apptDate" name="apptDate" required>
 
 		<label for="barbers">Choose a Time:</label>
 		<select id="times" name="time">
@@ -176,10 +176,10 @@
 
 		<div id=“container” class="serviceBox">
     <label for="barbers">Select Services:</label>
-		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="Haircut" name="service" value="Haircut" style="vertical-align:text-bottom;"> Haircut </div>
-		<div style=“float: left”><input type="checkbox" id="Beard Trim" name="service" value="Beard Trim"> Beard Trim </div>
-		<div style=“float: left”><input type="checkbox" id="Shave" name="service" value="Straight Razor Shave"> Straight Razor Shave </div>
-		<div style=“float: none”><input type="checkbox" id="Line Up" name="service" value="Line Up"> Line Up </div>
+		<div style=“float: left;vertical-align:middle;” ><input type="checkbox" id="Haircut" name="service[]" value="Haircut" style="vertical-align:text-bottom;"> Haircut </div>
+		<div style=“float: left”><input type="checkbox" id="Beard Trim" name="service[]" value="Beard Trim"> Beard Trim </div>
+		<div style=“float: left”><input type="checkbox" id="Shave" name="service[]" value="Straight Razor Shave"> Straight Razor Shave </div>
+		<div style=“float: none”><input type="checkbox" id="Line Up" name="service[]" value="Line Up"> Line Up </div>
 		</div>
 		<br>
 
@@ -191,7 +191,7 @@
   </div>
         <div class="rightFloat">
 
-          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGluZXVwYmFyYmVyc2hvcHBlQGdtYWlsLmNvbQ&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%23C0CA33&amp;color=%2333B679&amp;color=%230B8043&amp;mode=WEEK" style="float:right; position:absolute; z-index: -1;" width="90%" height="100%" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=a2ZudThxbWVrc2xkYThqdjBsZDg0aTR0ZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajVvYjNsZWFubDhqbm04ZWJxYzUxam11NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDNiOWJ2dmljbGRla3NrZWk2MXZxcHBibnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23333333&amp;color=%2329527A&amp;color=%23060D5E&amp;mode=WEEK&amp;title=Full%20Shop%20Schedule&amp;showPrint=0" style="float:right; position:absolute; z-index: 0;" width="90%" height="100%" frameborder="0" scrolling="no"></iframe>
 
         </div>
       </div>
