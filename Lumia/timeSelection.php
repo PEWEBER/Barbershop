@@ -143,10 +143,9 @@
           <h5>Let's get you looking fresh</h5>
         <label for="barbers">Choose a Barber:</label>
 		<select id="barbers" name="barbers">
-  		<option value="paige">Paige</option>
-  			<option value="eddie">Eddie</option>
-  			<option value="zachw">Zach W</option>
-  			<option value="zachj">Zach J</option>
+  		<option value="j5ob3leanl8jnm8ebqc51jmu5o@group.calendar.google.com">Paige</option>
+  			<option value="kfnu8qmekslda8jv0ld84i4tf0@group.calendar.google.com">Eddie</option>
+  			<option value="d3b9bvvicldekskei61vqppbns@group.calendar.google.com">Zach W</option>
 		</select>
 		<br>
 

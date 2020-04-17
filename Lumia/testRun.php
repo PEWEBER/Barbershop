@@ -20,6 +20,8 @@
       var time = "<?php echo $_POST['time']; ?>";
       var service = "<?php echo $_POST['service']; ?>";
       var special = "<?php echo $_POST['special']; ?>";
+      var fname = "<?php echo $_SESSION['FNAME']; ?>";
+      var lname = "<?php echo $_SESSION['LNAME']; ?>";
 
 		  var startDateTime = date + "T" + time + "-07:00";
 
@@ -29,12 +31,12 @@
          * https://developers.google.com/explorer-help/guides/code_samples#javascript
          */
 
-        function authenticate() {
+        /*function authenticate() {
           return gapi.auth2.getAuthInstance()
               .signIn({scope: "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events"})
               .then(function() { console.log("Sign-in successful"); },
                     function(err) { console.error("Error signing in", err); });
-        }
+        }*/
         function loadClient() {
           gapi.client.setApiKey("AIzaSyD6v5SShX8pgezbL3t_A-4W27_kue20kRk");
           return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest")
@@ -43,19 +45,52 @@
         }
         // Make sure the client is loaded and sign-in is complete before calling this method.
         function execute() {
+        
+        	loadClient();
+        
+        	var startDateTime = date + "T" + time + ":00" + "-05:00";
+		
+			var timeArray = time.split(":"); 
+			console.log(timeArray[0]);
+			console.log(timeArray[1]);
+		
+			if(timeArray[1] =="30")
+			{
+				var currHour = parseInt(timeArray[0]) + 1;
+				timeArray[1] = "00"
+				if(currHour == 25)
+				{
+					currHour = 1;
+				}
+				timeArray[0] = currHour.toString();
+			}
+			else // 00
+			{
+				timeArray[1] = "30";
+			}
+		
+			endDateTime = date + "T" + timeArray[0] + ":" + timeArray[1] + ":00" + "-05:00";
+			console.log(startDateTime);
+			console.log(endDateTime);
+			
+			console.log(fname);
+			console.log(lname);
+     
+        
+        
           return gapi.client.calendar.events.insert({
-            'calendarId': 'lineupbarbershoppe@gmail.com',
+            'calendarId': barber,
             'resource':{
-              'summary': 'specialer',
-              'location': '800 Howard St., San Francisco, CA 94103',
-              'description': 'service',
+              'summary': fname + " " + lname,
+              'location': '123 Main St. Nashville TN 37143',
+              'description': service + "- " + special,
               'start': {
-                'dateTime': '2020-04-17T10:00:00-07:00',
-                'timeZone': 'America/Los_Angeles'
+                'dateTime': startDateTime,
+                'timeZone': 'America/Chicago'
               },
               'end': {
-                'dateTime': '2020-04-17T11:00:00-07:00',
-                'timeZone': 'America/Los_Angeles'
+                'dateTime': endDateTime,
+                'timeZone': 'America/Chicago'
               },
               /*'recurrence': [
                 'RRULE:FREQ=DAILY;COUNT=2'
@@ -83,7 +118,7 @@
           gapi.auth2.init({client_id: "971950683471-6jrtv1sjbo39076ddqhibknh2cm1a8ji.apps.googleusercontent.com"});
         });
       </script>
-      <button onclick="authenticate().then(loadClient)">authorize and load</button>
+      <!--<button onclick="loadClient()">authorize and load</button>-->
       <button onclick="execute()">execute</button>
   </body>
 </html>

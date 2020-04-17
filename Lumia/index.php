@@ -55,9 +55,15 @@ if (isset($_POST['username']) && isset($_POST['password']))
       //pull from database usertype
       $query2 = "select userID from barberLogin where username = '".$username."' and password = '".$password."';";
       $query3 = "select type from barberLogin where username = '".$username."' and password = '".$password."';";
+      
+    $query4 = "select fname from barberLogin where username = '".$username."' and password = '".$password."';";
+    $query5 = "select lname from barberLogin where username = '".$username."' and password = '".$password."';";
 
       $result2 = $db_conn->query($query2);
       $result3 = $db_conn->query($query3);
+      
+      $result4 = $db_conn->query($query4);
+      $result5 = $db_conn->query($query5);
 
       if($result2 -> num_rows > 0)
       {
@@ -75,6 +81,21 @@ if (isset($_POST['username']) && isset($_POST['password']))
                   //echo $_SESSION['TYPE'];
               }
           }
+          
+    if($result4 -> num_rows > 0)
+      {
+          while ($row = $result4->fetch_assoc()) {
+              $_SESSION['FNAME'] = $row["fname"];
+              //echo $_SESSION['TYPE'];
+          }
+      }
+      if($result5 -> num_rows > 0)
+      {
+          while ($row = $result5->fetch_assoc()) {
+              $_SESSION['LNAME'] = $row["lname"];
+              //echo $_SESSION['TYPE'];
+          }
+      }
 
       header("Location: main.php");
       //echo "Session created";
