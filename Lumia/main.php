@@ -200,6 +200,41 @@
 
       </div>
     </section>
+    <section id="events">
+    <div class="container">
+        <div class="row">
+          <div class="span12">
+            <!-- Place somewhere in the <body> of your page -->
+            <div id="mainslider" class="flexslider">
+              <ul class="slides">
+                <li data-thumb="assets/img/slides/flexslider/img1.jpg">
+                  <img src="assets/img/bbq1.jpg" alt="" />
+                  <div class="flex-caption primary">
+                    <h2>Events</h2>
+                    <p>Come meet our barbers at our annual BBQ event!</p>
+                  </div>
+                </li>
+                <li data-thumb="assets/img/sponsors.jpg">
+                  <img src="assets/img/bbq2.jpg" alt="" />
+                  <div class="flex-caption warning">
+                    <h2>Regular Events</h2>
+                    <p>We want to get to know each of our customers.</p>
+                  </div>
+                </li>
+                <li data-thumb="assets/img/slides/flexslider/img3.jpg">
+                  <img src="assets/img/bbq3.jpg" alt="" />
+                  <div class="flex-caption success">
+                    <h2>A style for everyone</h2>
+                    <p>Find the one that fits you!</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <!-- Footer
  ================================================== -->
  <footer class="footer">
