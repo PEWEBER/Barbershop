@@ -4,7 +4,7 @@ README:
 
   Running Intstructions:
 
-  In the command line navigate to the Lumia directory, run php -S localhost:8000 to set up temporary php server. Navigate to localhost:8000 in your web browser to view the site. 
+  Clone the repo to your local machine. In the command line navigate to the Lumia directory, run php -S localhost:8000 to set up temporary php server. Navigate to localhost:8000 in your web browser to view the site. 
 
   Database: The project requires a databse for user accounts. You will need to set up one and replace the MySQL queries throughout the php files to correspond to the table you create.
 
